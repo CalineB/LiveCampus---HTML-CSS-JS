@@ -1,20 +1,24 @@
 :root {
     --green-color: rgb(72, 101, 27);
     --red-color: rgb(131, 33, 33);
+    --background-color: rgb(243, 238, 230); /* Couleur de fond claire */
+    --text-color: black; /* Couleur du texte claire */
+    --green-color: rgb(72, 101, 27);
+    --red-color: rgb(131, 33, 33);
+    --gold-color: rgb(180, 147, 37);
+
+        /* Mode nuit */
+        --dark-bg-color: rgb(33, 33, 33);
+        --dark-text-color: rgb(220, 220, 220);
+        --dark-green-color: rgb(103, 158, 60);
+        --dark-red-color: rgb(106, 12, 12);
+        --dark-gold-color: rgb(153, 121, 24);
+
+        
 }
 
-/* Global styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+/* Navbar mise en page mobile-first*/
 
-:root {
-    --green-color: #28a745;
-    --red-color: #dc3545;
-}
-
-/* Navbar styles (mobile-first) */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -84,7 +88,7 @@ body {
     right: 5rem;
 }
 
-/* Show the menu when the toggle is checked */
+/* Affiche le menu quand la case toggle est cochée */
 .menu-toggle:checked ~ .navLinks {
     display: flex;
 }
@@ -96,7 +100,7 @@ li.navIcons {
     align-items: center;
 }
 
-/* Buttons */
+/* Boutons */
 .greenBtn {
     background-color: var(--green-color);
     padding: .1rem .2rem;
@@ -108,7 +112,20 @@ li.navIcons {
     text-decoration: none;
 }
 
-/* Styles for larger screens */
+/* Positionner le bouton au-dessus du titre */
+#darkModeToggle {
+    top: -40px;
+    right: 20px;
+    border: var(--gold-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10; /* Permet au bouton d'être au-dessus des autres éléments */
+}
+  
+
+/* Grands écrans*/
 @media (min-width: 768px) {
     .menu-btn {
         display: none; /* Masquer le bouton menu */
@@ -134,4 +151,64 @@ li.navIcons {
         justify-content: center;
         align-items: center;
     }
+}
+
+
+  
+/* Mode sombre */
+body.dark-mode {
+    background-color: #150e0eb5; /* Fond sombre */
+    color: white;
+}
+
+body.dark-mode main {
+    background-color: rgb(23, 22, 22); /* Fond sombre */
+    color: white;
+}
+
+
+/* Effet au survol */
+#darkModeToggle:hover {
+    transform: scale(1.1);
+}
+  
+/* Mode clair : lune */
+#darkModeToggle[data-theme="light"] {
+    background-color: rgb(1, 1, 70); /* Bleu foncé */
+}
+  
+/* Mode sombre : soleil */
+#darkModeToggle[data-theme="dark"] {
+    background-color: rgb(32, 154, 224); /* Bleu ciel */
+}
+
+
+body.dark-mode .navbar {
+    background-color: var(--dark-bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .rest_name a {
+    color: var(--gold-color);
+}
+
+body.dark-mode .navLinks {
+    background: var(--dark-bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navLinks a {
+    color: var(--background-color);
+}
+
+body.dark-mode .menu-btn span {
+    background: var(--dark-text-color);
+}
+
+body.dark-mode .greenBtn {
+    background-color: var(--dark-green-color);
+}
+
+body.dark-mode i.bx {
+    color: whitesmoke !important;
 }

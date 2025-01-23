@@ -1,4 +1,4 @@
-/* Mobile-first styling */
+/* Mise en page mobile-first*/
 body {
     line-height: 1.6;
 }
@@ -33,9 +33,9 @@ body {
 
 form {
     position: relative;
-    width: 90%;
+    width: 300px;
     max-width: 400px;
-    margin: 20px auto;
+    margin: 50px auto;
     background: whitesmoke;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -46,9 +46,10 @@ form {
     align-items: center;
 }
 
+
 form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -61,21 +62,27 @@ form input:focus {
     border-color: goldenrod;
 }
 
+
 form label {
     position: relative;
     top: -10px;
-    left: 10px;
+    left: 50px;
     background: whitesmoke;
-    color: var(--gold-color);
-    font-size: 12px;
+    color: #aaa;
+    font-size: 16px;
     padding: 0 5px;
     transition: transform 0.2s ease, color 0.3s ease;
+    pointer-events: none;
+
 }
 
 form input:focus + label {
     color: var(--gold-color);
     transform: translateY(-10px);
+    background-color: white;
+    padding: 0 5px;
 }
+
 
 form .btn {
     background-color: var(--gold-color);
@@ -142,35 +149,56 @@ form .register:hover {
     }
 }
 
-/* Updated form styling based on the second code snippet */
-form {
-    position: relative;
-    width: 300px;
-    margin: 50px auto;
-}
-
-form input {
-    padding: 12px;
-}
-
-form label {
-    left: 50px;
-    font-size: 16px;
-    color: #aaa;
-    pointer-events: none;
-    transition: transform 0.2s ease, color 0.3s ease;
-}
-
-form input:focus + label {
-    transform: translateY(-10px);
-    color: goldenrod;
-    background-color: white;
-    padding: 0 5px;
-}
-
-form input:focus {
-    border-color: goldenrod;
-}
 
 
+/* --- Mode Nuit --- */
+body.dark-mode .auth_title {
+    background-color: rgb(33, 33, 33); /* Darkmode background */
+    color: rgb(153, 121, 24); /* Texte */
+  }
+  
+  body.dark-mode form {
+    background-color: rgb(33, 33, 33); /* Darkmode background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); /* Ombres */
+  }
+  
+  body.dark-mode form input {
+    border: 1px solid rgb(103, 158, 60); /* Bordure */
+    background-color: rgb(33, 33, 33); /* Darkmode background */
+    color: rgb(220, 220, 220); /* Texte */
+  }
+  
+  body.dark-mode form input:focus {
+    border-color: rgb(153, 121, 24); /* Bordure */
+  }
+  
+  body.dark-mode form label {
+    color: rgb(153, 121, 24); /* Couleur label */
+    background-color: rgb(33, 33, 33); /* Darkmode background */
+  }
+  
+  body.dark-mode form .btn {
+    background-color: rgb(103, 158, 60); /* Darkmode background */
+    color: rgb(220, 220, 220); /* Texte */
+  }
+  
+  body.dark-mode form .btn:hover {
+    background-color: rgb(153, 121, 24); /* background survol */
+    color: black; /* Couleur du text */
+  }
+  
+  body.dark-mode form .register {
+    background-color:var(--dark-red-color); /* Darkmode */
+    color: rgb(220, 220, 220); /* Texte */
+  }
+  
+  body.dark-mode form .register:hover {
+    background-color: rgb(3, 3, 69); /* Couleur de fond */
+    color: var(--gold-color); /* Texte darkmode */
+  }
+  
 
+  body.dark-mode form .forget_psw {
+    color: whitesmoke;
+    text-decoration: underline var(--green-color);
+  }

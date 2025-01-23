@@ -1,3 +1,5 @@
+/* Mise en page mobile-first*/
+
 /* --- Titres Généraux --- */
 h1 {
   font-size: 1.5rem;
@@ -119,6 +121,7 @@ section.profile.order .order_listing td {
   padding: 8px 10px;
   border-bottom: 1px solid #ddd;
   text-align: left;
+  color: black;
 }
 
 section.profile.order .order_listing .order_total {
@@ -135,6 +138,27 @@ p.user_profile.name {
   color: var(--green-color);
   font-weight: bold;
 }
+
+#file_input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#change_pic {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px dashed var(--gold-color);
+  background: transparent;
+  cursor: pointer;
+  background-color: var(--green-color);
+}
+
+#change_pic:hover {
+  background-color: var(--gold-color);
+  color: #fff;
+}
+
 
 .bonus {
   text-align: center;
@@ -184,4 +208,102 @@ p.user_profile.name {
     padding: 25px;
     border-radius: 12px;
   }
+}
+
+
+/* --- Titres Généraux --- */
+body.dark-mode h1 {
+  color: rgb(153, 121, 24); /* Texte */
+  background-color: rgb(33, 33, 33); /* Darkmode background */
+  box-shadow: inset calc(50% - 50px) -2px 0 rgb(103, 158, 60); /* Ombre verte */
+}
+
+/* --- Section Principale : Informations Utilisateur --- */
+body.dark-mode section.profile.info {
+  background-color: rgb(33, 33, 33); /* Background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+body.dark-mode section.profile.info .user_correspondance h3 {
+  color: rgb(220, 220, 220); /* Texte*/
+}
+
+body.dark-mode section.profile.info .user_correspondance p,
+body.dark-mode section.profile.info .user_correspondance address,
+body.dark-mode section.profile.info .user_correspondance a {
+  color: rgb(153, 153, 153); /* Texte */
+}
+
+body.dark-mode section.profile.info .user_img img {
+  border-color: rgb(153, 121, 24); /* Bordure */
+}
+
+body.dark-mode section.profile.info .account button {
+  color: rgb(33, 33, 33); /* Texte */
+}
+
+body.dark-mode section.profile.info .account .update_profile {
+  background-color: rgb(103, 158, 60); /* Couleur background*/
+}
+
+body.dark-mode section.profile.info .account .delete_profile {
+  background-color: rgb(230, 57, 53); /* Fond (background) */
+}
+
+/* --- Section Commandes --- */
+body.dark-mode section.profile.order {
+  background-color: rgb(33, 33, 33); /* Darkmode background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+body.dark-mode section.profile.order h4 {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode section.profile.order .bonus {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode section.profile.order .miams_points {
+  color: rgb(255, 152, 0); /* Texte */
+}
+
+/* Tableau des commandes */
+body.dark-mode section.profile.order .order_listing th,
+body.dark-mode section.profile.order .order_listing td {
+  color: rgb(220, 220, 220); /* Texte */
+  border-bottom: 1px solid rgb(77, 77, 77); /* Bordure */
+}
+
+body.dark-mode section.profile.order .order_listing tbody tr:nth-child(odd) {
+  background-color: rgb(44, 44, 44); /* Fond */
+}
+
+body.dark-mode section.profile.order .order_listing .order_total {
+  color: rgb(103, 158, 60); /* Prix */
+}
+
+body.dark-mode p.user_profile.name {
+  color: rgb(103, 158, 60); /* Texte */
+}
+
+/* --- Gestion de l'upload et du bouton d'image --- */
+body.dark-mode #change_pic {
+  border-color: rgb(153, 121, 24); /* Bordure */
+  background-color: rgb(103, 158, 60); /* Fond */
+  color: rgb(33, 33, 33); /* Texte */
+}
+
+body.dark-mode #change_pic:hover {
+  background-color: rgb(153, 121, 24); /* Fond */
+  color: whitesmoke; /* Texte */
+}
+
+/* --- Bonus et Pagination --- */
+body.dark-mode .bonus {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode .pagination {
+  color: rgb(220, 220, 220); /* Texte */
 }

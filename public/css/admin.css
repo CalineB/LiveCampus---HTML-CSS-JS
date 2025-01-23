@@ -1,3 +1,6 @@
+/* Mise en page mobile-first*/
+
+
 /* --- Style Global --- */
   
   main {
@@ -18,7 +21,7 @@
     border-bottom: 2px solid #ccc;
     box-shadow: inset calc(50% - 50px) -2px 0 var(--green-color);
     position: absolute;
-    background: darkblue;
+    background: rgb(56, 56, 56);
     padding: 10px 5px;
     z-index: 10;
   }
@@ -65,6 +68,7 @@
   .admin_menu .menu_btn:hover {
     background-color: var(--green-color);
     color: white;
+    text-align: center;
   }
   
   /* --- Section Principale --- */
@@ -107,3 +111,32 @@
     }
   }
   
+
+
+/* Mode nuit */
+body.dark-mode h1.dashboard {
+  color: var(--dark-gold-color);
+  background: var(--dark-red-color);
+  box-shadow: inset calc(50% - 50px) -2px 0 var(--dark-green-color);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .admin_menu {
+  background-color: var(--dark-bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .menu_btn {
+  background-color: var(--dark-gold-color);
+  color: var(--dark-bg-color);
+}
+
+body.dark-mode .menu_btn:hover {
+  background-color: var(--dark-red-color);
+  color: white;
+}
+
+body.dark-mode .main_section {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+}

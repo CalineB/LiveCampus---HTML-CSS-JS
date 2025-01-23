@@ -1,0 +1,163 @@
+[
+    {
+      "id": 1,
+      "name": "Green Burrito",
+      "category": "vegan",
+      "price": 8.99,
+      "image": "/public/images/burrito1.jpg",
+      "description": "Un burrito vegan avec une garniture de légumes verts et une sauce spéciale."
+    },
+    {
+      "id": 2,
+      "name": "Tofu Burrito",
+      "category": "vegan",
+      "price": 8.99,
+      "image": "/public/images/burrito2.jpeg",
+      "description": "Burrito savoureux garni de tofu et d'épices."
+    },
+    {
+      "id": 3,
+      "name": "Soja Burrito",
+      "category": "vegan",
+      "price": 8.99,
+      "image": "/public/images/burrito3.jpeg",
+      "description": "Burrito délicieux avec du soja et des légumes sautés."
+    },
+    {
+      "id": 4,
+      "name": "Burrito Champignons",
+      "category": "vegan",
+      "price": 8.99,
+      "image": "/public/images/burrito4.jpg",
+      "description": "Un mélange parfait de champignons et de légumes dans un burrito."
+    },
+    {
+      "id": 5,
+      "name": "Burrito Morue",
+      "category": "fish",
+      "price": 8.99,
+      "image": "/public/images/burrito5.jpg",
+      "description": "Burrito au poisson frais avec une sauce aux herbes."
+    },
+    {
+      "id": 6,
+      "name": "Burrito Colin",
+      "category": "fish",
+      "price": 8.99,
+      "image": "/public/images/burrito1.jpg",
+      "description": "Un burrito au colin pané, croustillant et savoureux."
+    },
+    {
+      "id": 7,
+      "name": "Burrito Thon",
+      "category": "fish",
+      "price": 8.99,
+      "image": "/public/images/burrito2.jpeg",
+      "description": "Burrito thon avec une touche d'épices et de légumes."
+    },
+    {
+      "id": 8,
+      "name": "Burrito Viande hachée",
+      "category": "meat",
+      "price": 8.99,
+      "image": "/public/images/burrito3.jpeg",
+      "description": "Un burrito classique garni de viande hachée et de sauce tomate."
+    },
+    {
+      "id": 9,
+      "name": "Burrito Poulet grillé",
+      "category": "meat",
+      "price": 8.99,
+      "image": "/public/images/burrito4.jpg",
+      "description": "Poulet grillé mariné aux épices dans un burrito moelleux."
+    },
+    {
+      "id": 10,
+      "name": "Burrito Poulet curry",
+      "category": "meat",
+      "price": 8.99,
+      "image": "/public/images/burrito5.jpg",
+      "description": "Burrito au poulet curry et lait de coco."
+    },
+    {
+      "id": 11,
+      "name": "Burrito Agneau grillé",
+      "category": "meat",
+      "price": 8.99,
+      "image": "/public/images/burrito1.jpg",
+      "description": "Un burrito délicieux avec de l'agneau grillé et des épices."
+    },
+    {
+      "id": 12,
+      "name": "Mangue",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice6.jpg",
+      "description": "Jus de mangue frais 98.5% de mangue, 1% d'eau, 0.5% de sucre."
+    },
+    {
+      "id": 13,
+      "name": "Carottes",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice4.jpg",
+      "description": "Jus de carotte au lait, idéal pour la santé et bien gourmand."
+    },
+    {
+      "id": 14,
+      "name": "Goyave",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice5.jpg",
+      "description": "Jus de goyave tropical."
+    },
+    {
+      "id": 15,
+      "name": "Fruit de la passion",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice1.jpeg",
+      "description": "Jus de fruit de la passion, passionnément bon."
+    },
+    {
+      "id": 16,
+      "name": "Pastèque",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice2.jpg",
+      "description": "Un jus de pastèque rafraîchissant parfait s'hydrater."
+    },
+    {
+      "id": 17,
+      "name": "Crème mangue avocat",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cream2.jpg",
+      "description": "Une crème onctueuse de mangue et d'avocat."
+    },
+    {
+      "id": 18,
+      "name": "Crème de corosol",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cream1.jpg",
+      "description": "Une douceur exotique à base de corosol sucré et crémeux."
+    },
+    {
+      "id": 19,
+      "name": "Gâteau au beurre",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cake1.jpeg",
+      "description": "Cupcake moelleux au beurre."
+    },
+    {
+      "id": 20,
+      "name": "Gâteau au chocolat",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cake2.jpg",
+      "description": "Cupcake au chocolat, moelleux."
+    }
+  ]
+  

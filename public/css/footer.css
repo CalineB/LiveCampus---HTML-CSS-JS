@@ -1,3 +1,5 @@
+/* Mise en page mobile-first*/
+
 footer {
     height: 5rem; /* Hauteur du footer */
     display: flex; /* Flexbox pour organiser les éléments */
@@ -29,6 +31,15 @@ footer .footer {
 
 footer .footer_info {
     align-items: center; /* Centre horizontalement */
+}
+
+.footer_link {
+    color: var(--gold-color);
+    margin: 0 1rem;
+}
+
+.footer_link:visited {
+    color: var(--gold-color);
 }
 
 /* Media Query pour les grands écrans (tablettes et plus grandes résolutions) */

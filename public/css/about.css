@@ -1,3 +1,5 @@
+/* Mise en page mobile-first*/
+
 .legal_info , span, .second_title, table, p {
     margin: 0 2rem;
 }
@@ -9,7 +11,7 @@
 
 span.law.info {
     margin-top: 7px;
-    color: grey;
+    color: rgb(23, 21, 21);
     font-size: 12px;
     display: flex;
     align-content: center;
@@ -54,6 +56,7 @@ table.business_ID td {
     border: none; /* Aucune bordure sur les cellules */
 }
 
+
 /* Responsive Design - Adaptation pour petits écrans */
 @media (max-width: 768px) {
     table.business_ID {
@@ -65,4 +68,30 @@ table.business_ID td {
         font-size: 0.8rem; /* Réduction de la taille du texte */
         padding: 0.6rem; /* Espacement plus petit */
     }
+}
+
+
+/* Mode nuit */
+body.dark-mode .legal_info {
+    color: var(--dark-gold-color);
+}
+
+body.dark-mode .second_title {
+    color: var(--dark-green-color);
+}
+
+body.dark-mode table.business_ID tr:nth-child(odd) {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+body.dark-mode table.business_ID tr:nth-child(even) {
+    background-color: rgba(70, 70, 70, 0.8);
+}
+
+body.dark-mode p {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode span.law.info {
+    color: grey;
 }
