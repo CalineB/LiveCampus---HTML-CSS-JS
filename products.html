@@ -51,6 +51,8 @@
           <button class="green greenBtn" data-translate="nav.connect">
             <a href="auth.html">Se connecter</a>
           </button>
+
+          <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
         </li>
       </ul>
     </nav>
@@ -72,20 +74,21 @@
           </li>
 
           <li class="product">
-            <button data-translate="products.drinks">Boissons</button>
+            <button data-translate="products.drink">Boissons</button>
           </li>
 
           <li class="product">
-            <button data-translate="products.desserts">Desserts</button>
+            <button data-translate="products.dessert">Desserts</button>
           </li>
         </ul>
       </div>
 
-      <section class="category vegan">
+      <!--Ajout d'un ID sur les sections pour ajouter la classe avec le même nom que l'ID pour faciliter le classement depuis fetch-->
+      <section id="vegan" class="category vegan">
         <h1 class="veg_title" data-translate="products.veg">Vegan</h1>
 
         <div class="articles">
-          <article class="article">
+          <!-- <article class="article vegan">
             <img src="/public/images/burrito1.jpg" alt="vegan_burritos" />
             <p class="art_name">Green Burrito<span>€ 8.99</span></p>
             <details class="details" data-translate="products.vegg_burrito">
@@ -93,7 +96,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article vegan">
             <img src="/public/images/burrito2.jpeg" alt="tofu_burritos" />
             <p class="art_name">Tofu Burrito<span>€ 8.99</span></p>
             <details class="details" data-translate="products.tofu_burrito">
@@ -101,7 +104,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article vegan">
             <img src="/public/images/burrito3.jpeg" alt="soja_burritos" />
             <p class="art_name">Soja Burrito<span>€ 8.99</span></p>
             <details class="details" data-translate="products.soja_burrito">
@@ -109,21 +112,21 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article vegan">
             <img src="/public/images/burrito4.jpg" alt="mushroom_burritos" />
             <p class="art_name">Burrito Champignons<span>€ 8.99</span></p>
             <details class="details" data-translate="products.mushroom_burrito">
               
-            </details>
+            </details> -->
           </article>
         </div>
       </section>
 
-      <section class="category fish">
+      <section id="fish" class="category fish">
         <h1 class="fish_title" data-translate="products.fish">Poissons</h1>
 
         <div class="articles">
-          <article class="article">
+          <!-- <article class="article fish">
             <img src="/public/images/burrito5.jpg" alt="codfish_burritos" />
             <p class="art_name">Burrito Morue<span>€ 8.99</span></p>
             <details class="details" data-translate="products.codfish_burrito">
@@ -131,7 +134,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article fish">
             <img src="/public/images/burrito1.jpg" alt="fried_fish_burritos" />
             <p class="art_name">Burrito Colin<span>€ 8.99</span></p>
             <details class="details" data-translate="products.fried_fish_burrito">
@@ -139,21 +142,21 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article fish">
             <img src="/public/images/burrito2.jpeg" alt="tuna_burritos" />
             <p class="art_name">Burrito Thon<span>€ 8.99</span></p>
             <details class="details" data-translate="products.tuna_burrito">
               
             </details>
-          </article>
+          </article> -->
         </div>
       </section>
 
-      <section class="category meat">
+      <section id="meat" class="category meat">
         <h1 class="meat_title" data-translate="products.meat">Viandes</h1>
 
         <div class="articles">
-          <article class="article">
+          <!-- <article class="article meat">
             <img src="/public/images/burrito3.jpeg" alt="beef_burritos" />
             <p class="art_name">Burrito Viande hachée<span>€ 8.99</span></p>
             <details class="details" data-translate="products.beef_burrito">
@@ -161,7 +164,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article meat">
             <img src="/public/images/burrito4.jpg" alt="chicken_burritos" />
             <p class="art_name">Burrito Poulet grillé<span>€ 8.99</span></p>
             <details class="details" data-translate="products.chicken_burrito">
@@ -169,7 +172,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article meat">
             <img src="/public/images/burrito5.jpg" alt="curry_burritos" />
             <p class="art_name">Burrito Poulet curry<span>€ 8.99</span></p>
             <details class="details" data-translate="products.curry_burrito">
@@ -177,20 +180,21 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article meat">
             <img src="/public/images/burrito1.jpg" alt="lamb_burritos" />
             <p class="art_name">Burrito Agneau grillé<span>€ 8.99</span></p>
             <details class="details" data-translate="products.lamb_burritos">
               
             </details>
-          </article>
+          </article> -->
         </div>
       </section>
 
-      <section class="category drinks">
+      <section id="drink" class="category drinks">
         <h1 class="drink_title" data-translate="products.drinks">Boissons</h1>
+        
         <div class="articles">
-          <article class="article">
+          <!-- <article class="article drink">
             <img src="/public/images/juice6.jpg" alt="mango_juice" />
             <p class="art_name">Mangue<span>€ 8.99</span></p>
             <details class="details" data-translate="products.mango_juice">
@@ -198,7 +202,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article drink">
             <img src="/public/images/juice4.jpg" alt="carrot_juice" />
             <p class="art_name">Carottes<span>€ 8.99</span></p>
             <details class="details" data-translate="products.carrot_juice">
@@ -206,7 +210,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article drink">
             <img src="/public/images/juice5.jpg" alt="guava_juice" />
             <p class="art_name">Goyave<span>€ 8.99</span></p>
             <details class="details" data-translate="products.guava_juice">
@@ -214,7 +218,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article drink">
             <img src="/public/images/juice1.jpeg" alt="passion_fruit_juice" />
             <p class="art_name">Fruit de la passion<span>€ 8.99</span></p>
             <details class="details" data-translate="products.passion_fruit_juice">
@@ -222,22 +226,23 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article drink">
             <img src="/public/images/juice2.jpg" alt="watermelon_juice" />
             <p class="art_name">Pastèque<span>€ 8.99</span></p>
             <details class="details" data-translate="products.watermelon_juice">
               
             </details>
-          </article>
+          </article> -->
         </div>
       </section>
 
-      <section class="category desserts">
+      <section id="dessert" class="category desserts">
         <h1 class="dessert_title" data-translate="products.desserts">
           Desserts
         </h1>
+
         <div class="articles">
-          <article class="article">
+          <!-- <article class="article dessert">
             <img src="/public/images/cream2.jpg" alt="mango_avocado_cream" />
             <p class="art_name">Crème mangue avocat<span>€ 8.99</span></p>
             <details class="details" data-translate="products.mango_cream">
@@ -245,7 +250,7 @@
             </details>
           </article>
 
-          <article class="article">
+          <article class="article dessert">
             <img src="/public/images/cream1.jpg" alt="soursop_cream" />
             <p class="art_name">Crème de corosol<span>€ 8.99</span></p>
             <details class="details" data-translate="products.soursoup_cream">
@@ -253,21 +258,21 @@
             </details>
           </article>
 
-          <article class="article">
-            <img src="/public/images/cake1.jpg" alt="finger_licking_cake" />
+          <article class="article dessert">
+            <img src="/public/images/cake1.jpeg" alt="finger_licking_cake" />
             <p class="art_name">Gâteau au beurre<span>€ 8.99</span></p>
             <details class="details" data-translate="products.butter_cake">
               
             </details>
           </article>
 
-          <article class="article">
+          <article class="article dessert">
             <img src="/public/images/cake2.jpg" alt="chocolate_finger_licking_cake" />
             <p class="art_name">Gâteau au chocolat<span>€ 8.99</span></p>
             <details class="details" data-translate="products.chocolate_cake">
               
             </details>
-          </article>
+          </article> -->
         </div>
       </section>
 
@@ -276,9 +281,9 @@
     <footer class="bg-gray-800 text-white py-8 px-4">
       <div class="container mx-auto flex flex-col items-center">
         <div class="flex flex-wrap justify-center gap-8 mb-6">
-          <a href="#" class="text-gray-400 hover:text-white">Accueil</a>
-          <a href="#" class="text-gray-400 hover:text-white">À propos</a>
-          <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+          <a href="#" class="text-gray-400 hover:text-white footer_link">Accueil</a>
+          <a href="#" class="text-gray-400 hover:text-white footer_link">À propos</a>
+          <a href="#" class="text-gray-400 hover:text-white footer_link">Contact</a>
         </div>
         <div class="text-center text-sm text-gray-400">
           <p>&copy; 2025 Brun'Itos. Tous droits réservés.</p>
@@ -286,5 +291,9 @@
       </div>
     </footer>
 
+    <script src="/script/darkmode.js"></script>
+    <script src="/script/toggle_menu.js"></script>
+
   </body>
+  <script src="/script/products.js"></script>
 </html>

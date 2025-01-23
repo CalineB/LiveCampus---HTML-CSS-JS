@@ -95,7 +95,7 @@ h4 {
 .total_ttc {
     text-decoration: overline;
     padding-top: 2rem;
-    color: var(--gold-color);
+    color: var(--gold-color) !important; /* !important car le style ne voulait pas s'appliquer au prix (surement un litige avec une autre ligne de texte */
 }
 
 
@@ -119,7 +119,7 @@ span.price {
     font-size: 15px;
 }
   
-  /* Mise en page pour les écrans larges */
+/* Mise en page pour les écrans larges */
   @media (min-width: 768px) {
     .articles {
       gap: 1.5rem;
@@ -158,7 +158,7 @@ span.price {
     .articles {
       flex: 2; /* Occupe 3/3 de l'espace */
     }
-  
+
     .sum {
       flex: 1; /* Occupe 1/3 de l'espace */
       margin-left: 1.5rem;
@@ -194,3 +194,35 @@ span.price {
     }
   }
   
+
+  /* --- Mode Nuit --- */
+body.dark-mode h1 {
+  color: rgb(153, 121, 24); /* Texte */
+  background-color: rgb(33, 33, 33); /* Darkmode background */
+}
+
+body.dark-mode .qnt {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode .article, body.dark-mode .sum {
+  background-color: rgb(33, 33, 33); /* Darkmode background */
+  border-color: rgb(103, 158, 60); /* Couleur bordure */
+}
+
+body.dark-mode .article .art_name {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode .article .amount {
+  color: rgb(153, 121, 24); /* Texte */
+}
+
+body.dark-mode .price {
+  color: rgb(103, 158, 60); /* Texte*/
+}
+
+body.dark-mode .next {
+  background-color: rgb(103, 158, 60); /* Couleur du fond */
+  color: rgb(33, 33, 33); /* Texte */
+}
