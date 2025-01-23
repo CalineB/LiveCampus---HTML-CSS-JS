@@ -1,0 +1,50 @@
+footer {
+    height: 5rem; /* Hauteur du footer */
+    display: flex; /* Flexbox pour organiser les éléments */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    text-align: center; /* Centre le texte */
+    box-shadow: inset calc(50% - 50px) -2px 0 var(--green-color); /* Décoration */
+    position: relative; /* Pour utiliser ::after avec position absolue */
+    flex-direction: column; /* Affichage vertical par défaut (mobile-first) */
+    margin-bottom: 2rem;
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40rem;
+    border-top: dotted 1px var(--green-color); /* Décoration */
+}
+
+footer .footer {
+    gap: 2rem; /* Espacement entre les éléments */
+    display: flex; /* Flexbox pour les éléments à l'intérieur du footer */
+    flex-direction: column; /* Organise les éléments en colonne sur mobile */
+    align-items: center; /* Centre les éléments horizontalement */
+}
+
+footer .footer_info {
+    align-items: center; /* Centre horizontalement */
+}
+
+/* Media Query pour les grands écrans (tablettes et plus grandes résolutions) */
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row; /* Passe l'affichage en ligne sur les grands écrans */
+    }
+
+    footer .footer {
+        flex-direction: row; /* Les éléments sont alignés horizontalement */
+        justify-content: center; /* Centre les éléments horizontalement */
+        align-items: center; /* Centrage vertical */
+    }
+
+    footer .footer_info {
+        margin: 0 2rem; /* Espacement entre les éléments */
+        text-align: left; /* Aligner à gauche le texte dans les éléments */
+    }
+}

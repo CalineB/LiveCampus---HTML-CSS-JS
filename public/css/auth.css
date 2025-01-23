@@ -1,0 +1,159 @@
+/* Mobile-first styling */
+body {
+    line-height: 1.6;
+}
+
+
+.menu-btn {
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 18px;
+    position: relative;
+}
+
+.menu-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: whitesmoke;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle:checked + .menu-btn + .navLinks {
+    display: flex;
+}
+
+form {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+form input:focus {
+    border-color: goldenrod;
+}
+
+form label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: whitesmoke;
+    color: var(--gold-color);
+    font-size: 12px;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+}
+
+form input:focus + label {
+    color: var(--gold-color);
+    transform: translateY(-10px);
+}
+
+form .btn {
+    background-color: var(--gold-color);
+    color: rgb(75, 68, 68);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+form .btn:hover {
+    background-color: var(--green-color);
+    color: whitesmoke;
+}
+
+form .register {
+    background-color: rgb(5, 5, 87);
+    color: whitesmoke;
+    width: 70%;
+}
+
+form .register:hover {
+    background-color: var(--gold-color);
+    color: rgb(23, 11, 11);
+}
+
+/* Tablet styling */
+@media (min-width: 600px) {
+    .navLinks {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .navLinks {
+        display: flex;
+    }
+}
+
+/* Desktop styling */
+@media (min-width: 1024px) {
+    nav.navbar {
+        padding: 10px 40px;
+    }
+
+    form {
+        width: 350px;
+    }
+}
+
+/* Updated form styling based on the second code snippet */
+form {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+}
+
+form input {
+    padding: 12px;
+}
+
+form label {
+    left: 50px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+form input:focus + label {
+    transform: translateY(-10px);
+    color: goldenrod;
+    background-color: white;
+    padding: 0 5px;
+}
+
+form input:focus {
+    border-color: goldenrod;
+}
+
+
+

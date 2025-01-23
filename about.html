@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRUN'ITOS à propos</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/reset.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/public/css/navbar.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/public/css/about.css"/> <!--Mise en page spécifique à la page-->
+    <link rel="stylesheet" href="/public/css/footer.css"/> <!--Mise en page générale à toutes les pages-->
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <h2 class="rest_name">
+        <a href="index.html">Brun'Itos</a>
+        <a href="basket.html">
+          <i class="bx bxs-basket bx-tada"
+            style="color: rgba(40, 93, 16, 0.48)">
+          </i>
+        </a>
+      </h2>
+
+      <!-- boutton toggle (menu drop) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="navLinks">
+        <li class="navLink" data-translate="nav.home">
+          <a href="index.html">Accueil</a>
+        </li>
+        <li class="navLink" data-translate="nav.card">
+          <a href="products.html">Carte</a>
+        </li>
+        <li class="navLink" data-translate="nav.about">
+          <a href="about.html">À propos</a>
+        </li>
+        <li class="navIcons">
+          <a href="/profile.html">
+            <i class="bx bxs-user" style="color: rgba(183, 148, 10, 0.71)"></i>
+          </a>
+          <button class="green greenBtn" data-translate="nav.connect">
+            <a href="auth.html">Se connecter</a>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <h1 class="legal_info" data-translate="about.legal">
+        Mentions Légales
+        <span class="law info" data-translate="about_span"
+          >En vertu de l’article 6 de la Loi n°2004-575 du 21 juin 2004 pour la
+          Confiance dans l’Economie Numérique (LCEN), il est précisé que notre
+          site internet est édité par CBO</span
+        >
+      </h1>
+
+      <h2 class="identification second_title" data-translate="about.id_title">
+        Identification de l'entreprise
+      </h2>
+
+      <table class="business_ID" data-translate="about.kbis">
+        <tbody>
+          <tr>
+            <th scope="row" data-translate="about.society">Société</th>
+            <td data-translate="about.name">Brun'itos</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.add_row">Adresse postale</th>
+            <td data-translate="about.address">
+              Addresse - Suite - Code postale
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.phone_row">Téléphone</th>
+            <td data-translate="about.phone">01 01 01 01 01</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.email_row">Courriel</th>
+            <td data-translate="about.email">brunitos@gmx.fr</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.id_row">
+              Immatriculée au RCS ou SIREN
+            </th>
+            <td data-translate="about.id_numb">888 888 888</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.siret_row">SIRET</th>
+            <td data-translate="about.siret">88 88 88 88 88 88 88</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.ape_row">Code APE</th>
+            <td data-translate="about.ape">5510Z</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.socialcap_row">
+              Capital social
+            </th>
+            <td data-translate="about.social_cap">€ 10 000</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.tva_row">
+              N° d'identification à la TVA
+            </th>
+            <td data-translate="about.tva_numb">FR111 111 111 11</td>
+          </tr>
+
+          <tr>
+            <th scope="row" data-translate="about.owner_row">
+              Responsable légal
+            </th>
+            <td data-translate="about.owner">AKA</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="data second_title" data-translate="about.data">
+        Protection des données personnelles
+      </h2>
+
+      <p class="law info" data-translate="about.prive_data">
+        Toutes les données collectées sur ce site, par quelque moyen que ce
+        soit, sont à l'usage réservé de la société BRUN'ITOS.
+        <br />
+        <br />
+        Conformément à l'article 34 de la loi 78-17 Informatique et Libertés du
+        6 janvier 1978 modifiée et le Règlement Général sur la Protection des
+        Données (Règlement UE 2016/679) ou « RGPD », vous disposez d'un droit
+        d'accès, de modification, de rectification et de suppression des données
+        vous concernant.
+        <br />
+        <br />
+        Pour exercer ce droit, contactez-nous par e-mail à : brunitos@gmx.fr
+      </p>
+
+      <h2 class="payments second_title" data-translate="about.payments">
+        Paiement sécurisé
+      </h2>
+
+      <p class="paiement info" data-translate="about.paiement_info">
+        Pour vos transactions financières, notre site utilise une solution de
+        paiement externe.
+        <br />
+        <br />
+        Avec ce système, votre paiement par carte de crédit s'effectue
+        directement sur le serveur sécurisé de la banque en ligne.
+        <br />
+        <br />
+        À aucun moment, votre numéro de carte de crédit ne sera communiqué à
+        BRUN'ITOS.
+      </p>
+
+      <h2 class="copyrights second_title" data-translate="about.copyrights">
+        Copyrights
+      </h2>
+      <p class="copy info" data-translate="about.copyrights_info">
+        Tous droits réservés ©CBO.
+        <br />
+        <br />
+        Tous droits de reproduction et de diffusion réservés ©CBO.
+      </p>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 px-4">
+      <div class="container mx-auto flex flex-col items-center">
+        <div class="flex flex-wrap justify-center gap-8 mb-6">
+          <a href="#" class="text-gray-400 hover:text-white">Accueil</a>
+          <a href="#" class="text-gray-400 hover:text-white">À propos</a>
+          <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+        </div>
+        <div class="text-center text-sm text-gray-400">
+          <p>&copy; 2025 Brun'Itos. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>

@@ -1,0 +1,43 @@
+:root {
+    --green-color: rgb(72, 101, 27);
+    --red-color: rgb(131, 33, 33);
+    --gold-color:  rgb(180, 147, 37);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+html, body, main, nav {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh; /* permets que la hauteur min du body prenne toute la fenêtre*/
+}
+
+main {
+    background-color: rgb(243, 238, 230);
+    display: block;
+    margin: 1.5rem 2rem;
+    padding-bottom: 5rem;
+    flex: 1; /* permets de prendre toute l'espace disponible*/
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.bxs-basket, .bxs-user {
+    cursor: pointer;
+}

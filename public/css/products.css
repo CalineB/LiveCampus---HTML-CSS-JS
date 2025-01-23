@@ -1,0 +1,174 @@
+/* Pour la catégorie de produits */
+.prod_categories {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+/* Style pour les produits, affichage en flex */
+.products {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column; /* Organise les éléments en colonne sur mobile */
+    list-style: none; /* retirer les puces */
+}
+
+/* Boutons de produit */
+.product button {
+    border-radius: 40%;
+    border: solid gray 1px;
+    padding: 7px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center; /* Alignement au centre */
+    align-items: center;
+}
+
+.product button:hover {
+    background-color: var(--gold-color);
+    color: whitesmoke;
+}
+
+.product button:active {
+    background-color: var(--green-color);
+    color: whitesmoke;
+}
+
+/* Titres des catégories */
+.category h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: var(--green-color);
+    text-align: left;
+    box-shadow: inset calc(50% - 50px) -2px 0 var(--green-color);
+    z-index: 1;
+    position: relative;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20rem;
+    border-bottom: solid 1px rgb(180, 147, 37);
+    z-index: -1;
+}
+
+/* Catégorie de produits */
+.category {
+    top: 0;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 80%; /* Largeur à 100% pour mobile */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Évite le débordement des éléments */
+}
+
+/* Articles dans la catégorie */
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    flex-direction: column; /* Organise les éléments en colonne sur mobile */
+}
+
+/* Style de chaque article */
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    border: solid gray .8px;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+                0 -4px 8px rgba(0, 0, 0, 0.05),
+                4px 0 8px rgba(0, 0, 0, 0.05), 
+                -4px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.article:hover {
+    transform: translateY(-5px);
+}
+
+.article img {
+    width: 100%;
+    max-width: 200px; /* Taille de l'image adaptée aux petits écrans */
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* Nom et prix des articles */
+.art_name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--gold-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.art_name span {
+    font-size: 1rem;
+    color: var(--green-color);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Détails du produit */
+.details {
+    font-size: 0.9rem;
+    color: #33414f;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.details:hover {
+    color: var(--gold-color);
+    font-weight: bold;
+}
+
+/* Media query pour les écrans plus larges (tablettes et bureau) */
+@media (min-width: 768px) {
+    .products {
+        flex-direction: row; /* Affiche les produits en ligne */
+    }
+
+    .category {
+        width: 50rem; /* Largeur augmentée pour les écrans larges */
+    }
+
+    .articles {
+        flex-direction: row; /* Affiche les articles en ligne sur les grands écrans */
+        justify-content: flex-start;
+    }
+
+    .article {
+        width: 200px; /* Taille fixe pour chaque article */
+    }
+
+    .article img {
+        max-width: 250px; /* Agrandissement de l'image sur les grands écrans */
+    }
+
+    .category h1 {
+        font-size: 2rem; /* Augmente la taille du titre sur les grands écrans */
+    }
+}

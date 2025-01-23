@@ -1,0 +1,56 @@
+/* Citation */
+q {
+    display: block; /* Comportement de bloc pour centrer */
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 28px; /* Taille réduite pour mobile */
+    font-style: italic;
+}
+
+i {
+    font-weight: 700;
+}
+
+/* Couleurs */
+.green {
+    color: var(--green-color);
+}
+
+.gold {
+    color: var(--gold-color);
+}
+
+/* Image principale */
+.main_img {
+    width: 200px; /* Taille plus petite pour mobile */
+    height: 200px;
+    border-radius: 100%; /* Cercle parfait */
+    display: block;
+    margin: 2rem auto; /* Centre l'image avec un espacement */
+}
+
+/* Introduction */
+.introduction {
+    width: 90%; /* Largeur ajustée pour les petits écrans */
+    display: block;
+    text-align: center; /* Centre les lignes */
+    margin: 0 auto 2rem; /* Centre le paragraphe et ajoute un espace en bas */
+}
+
+/* Styles pour les écrans plus larges */
+@media (min-width: 768px) {
+    q {
+        font-size: 34px; /* Taille de texte augmentée */
+        margin-top: 7rem; /* Plus d'espace au-dessus */
+    }
+
+    .main_img {
+        width: 300px; /* Taille augmentée pour desktop */
+        height: 300px;
+        margin: 3rem auto; /* Espacement ajusté */
+    }
+
+    .introduction {
+        width: 80%; /* Largeur augmentée pour desktop */
+    }
+}

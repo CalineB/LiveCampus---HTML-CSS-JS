@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRUN'ITOS ConneX</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/reset.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/public/css/navbar.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/public/css/auth.css"/> <!--Mise en page spécifique à la page-->
+    <link rel="stylesheet" href="/public/css/footer.css"/> <!--Mise en page générale à toutes les pages-->
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <h2 class="rest_name">
+        <a href="index.html">Brun'Itos</a>
+        <a href="basket.html">
+          <i class="bx bxs-basket bx-tada"
+            style="color: rgba(40, 93, 16, 0.48)">
+          </i>
+        </a>
+      </h2>
+
+      <!-- boutton toggle (menu drop) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="navLinks">
+        <li class="navLink" data-translate="nav.home">
+          <a href="index.html">Accueil</a>
+        </li>
+        <li class="navLink" data-translate="nav.card">
+          <a href="products.html">Carte</a>
+        </li>
+        <li class="navLink" data-translate="nav.about">
+          <a href="about.html">À propos</a>
+        </li>
+        <li class="navIcons">
+          <a href="/profile.html">
+            <i class="bx bxs-user" style="color: rgba(183, 148, 10, 0.71)"></i>
+          </a>
+          <button class="green greenBtn" data-translate="nav.connect">
+            <a href="auth.html">Se connecter</a>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      
+      <form action="" method="post">
+        <input type="email"><label for="email" data-translate="register.email">Email</label>
+        <br>
+        <input type="number"><label for="phone" aria-required="true" data-translate="register.phone">Téléphone</label>
+        <br>
+        <input type="text"><label for="firstname" aria-required="true" data-translate="register.aka">Prénom ou AKA</label>
+        <br>
+        <input type="varchar"><label for="lastname" data-translate="register.lastname">Nom</label>
+
+
+        <input type="password"><label for="password" data-translate="register.psw">Mot de passe</label>
+        <input type="password"><label for="password_conf" data-translate="register.psw_conf">Confirmation du mot de passe</label>
+
+        <label for="submit-button" data-translate="auth.submit_label">S'enregistrer</label>
+        <br>
+        <input type="submit" id="submit-button" value="Créer un compte" class="btn" data-translate="resister.register_submit_btn">
+      </form>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 px-4">
+      <div class="container mx-auto flex flex-col items-center">
+        <div class="flex flex-wrap justify-center gap-8 mb-6">
+          <a href="#" class="text-gray-400 hover:text-white">Accueil</a>
+          <a href="#" class="text-gray-400 hover:text-white">À propos</a>
+          <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+        </div>
+        <div class="text-center text-sm text-gray-400">
+          <p>&copy; 2025 Brun'Itos. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

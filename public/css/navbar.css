@@ -1,0 +1,137 @@
+:root {
+    --green-color: rgb(72, 101, 27);
+    --red-color: rgb(131, 33, 33);
+}
+
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --green-color: #28a745;
+    --red-color: #dc3545;
+}
+
+/* Navbar styles (mobile-first) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.rest_name {
+    margin-left: 1rem;
+    color: var(--green-color);
+}
+
+.rest_name a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--green-color);
+}
+
+.navLinks {
+    display: none; /* Masqué par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: var(--red-color);
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    left: 70%;
+    position: absolute;
+}
+
+.menu-btn span {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    right: 5rem;
+}
+
+/* Show the menu when the toggle is checked */
+.menu-toggle:checked ~ .navLinks {
+    display: flex;
+}
+
+li.navIcons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Buttons */
+.greenBtn {
+    background-color: var(--green-color);
+    padding: .1rem .2rem;
+    border-radius: 15%;
+}
+
+.greenBtn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none; /* Masquer le bouton menu */
+    }
+
+    .navLinks {
+        display: flex; /* Afficher les liens horizontalement */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navLinks a {
+        padding: 0 1rem;
+    }
+
+    .navIcons {
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
