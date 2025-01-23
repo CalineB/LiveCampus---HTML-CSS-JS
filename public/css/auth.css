@@ -3,6 +3,12 @@ body {
     line-height: 1.6;
 }
 
+.auth_title {
+    background-color: darkblue;
+    color: var(--gold-color);
+    padding: 5px;
+    text-align: center;
+}
 
 .menu-btn {
     display: block;
@@ -56,14 +62,14 @@ form input:focus {
 }
 
 form label {
-    position: absolute;
+    position: relative;
     top: -10px;
     left: 10px;
     background: whitesmoke;
     color: var(--gold-color);
     font-size: 12px;
     padding: 0 5px;
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, color 0.3s ease;
 }
 
 form input:focus + label {
@@ -87,6 +93,13 @@ form .btn:hover {
     color: whitesmoke;
 }
 
+.btn_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
 form .register {
     background-color: rgb(5, 5, 87);
     color: whitesmoke;
@@ -96,6 +109,10 @@ form .register {
 form .register:hover {
     background-color: var(--gold-color);
     color: rgb(23, 11, 11);
+}
+
+.info_pws {
+    text-align: center;
 }
 
 /* Tablet styling */

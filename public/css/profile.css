@@ -3,13 +3,14 @@ h1 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid #ccc;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   color: var(--gold-color);
   text-align: center;
   box-shadow: inset calc(50% - 50px) -2px 0 var(--green-color);
   position: relative;
   z-index: 1;
+  background-color: darkblue;
 }
 
 /* --- Section Principale : Informations Utilisateur --- */
