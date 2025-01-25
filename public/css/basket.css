@@ -118,6 +118,20 @@ span.price {
 .bxs-arrow-from-left {
     font-size: 15px;
 }
+
+.art_price{
+  margin-right: .3rem;
+}
+
+i.qnt.many_article  {
+  margin-left: .3rem;
+}
+
+i.bx.bx-trash:hover {
+  background-color: var(--gold-color);
+  margin: .1rem;
+}
+
   
 /* Mise en page pour les écrans larges */
   @media (min-width: 768px) {

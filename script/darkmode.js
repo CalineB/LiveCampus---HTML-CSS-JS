@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM entièrement chargé et analysé');
+    // console.log('DOM entièrement chargé et analysé');
     
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
   
-    console.log('Bouton trouvé :', darkModeToggle);
+    // console.log('Bouton trouvé :', darkModeToggle);
   
     // Vérifie si une préférence est déjà enregistrée
     const darkMode = localStorage.getItem('darkMode');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // Ajoute un événement au clic pour activer/désactiver le mode sombre
     darkModeToggle.addEventListener('click', () => {
-      console.log('Bouton cliqué');
+      //console.log('Bouton cliqué');
       
       if (body.classList.contains('dark-mode')) {
         console.log('Mode sombre désactivé');
