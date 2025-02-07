@@ -169,6 +169,19 @@ h1::before {
   }
   
 
+/*Mise à jour style grisatrre en dehors des horaires de disponibilités*/
+.grayed-out {
+    opacity: 0.5;
+    background-color: #f0f0f0;
+    pointer-events: none;
+  }
+  
+.active {
+    opacity: 1; /* Rendre l'élément complètement visible */
+    pointer-events: auto; /* Autoriser les interactions */
+}
+
+
 
 /* Media query pour les écrans plus larges (tablettes et bureau) */
 @media (min-width: 768px) {

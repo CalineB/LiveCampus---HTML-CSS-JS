@@ -1,15 +1,20 @@
 // Se déplacer dans les différentes catégories de produit à l'aide des boutons en haut du main
 document.addEventListener('DOMContentLoaded', () => {
+  
   // Sélection des boutons pour les catégories de produits
   const buttons = document.querySelectorAll('.product button'); // Tous les boutons des catégories
   buttons.forEach(button => {
     button.addEventListener('click', () => {
+      
       // Supprime la classe "active" de tous les boutons
       buttons.forEach(btn => btn.classList.remove('active'));
+      
       // Ajoute la classe "active" au bouton cliqué
       button.classList.add('active');
+      
       // Récupère la catégorie depuis le texte du bouton
-      const category = button.getAttribute('data-translate').split('.')[1]; // Exemple : "veg", "fish", etc.
+      const category = button.getAttribute('data-translate').split('.')[1];
+      
       // Défilement vers la section correspondante
       const section = document.getElementById(category);
       if (section) {
@@ -39,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (categorySection) {
         // Créer l'article
         const article = document.createElement('article');
-        article.className = `article ${product.category}`;
+        article.className = `article ${product.category} ${product.isGrayedOut ? 'grayed-out' : ''}`;
         // Ajouter le contenu principal
         article.innerHTML = `
           <img src="${product.image}" alt="${product.name}" />
@@ -49,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>${product.description}</p>
           </details>
         `;
+        
         // Créer dynamiquement le bouton "Ajouter au panier"
         const addToCartButton = document.createElement('button');
         addToCartButton.className = 'add-to-cart';
@@ -56,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addToCartButton.dataset.id = product.id;
         addToCartButton.dataset.name = product.name;
         addToCartButton.dataset.price = product.price;
+
         // Ajouter le bouton dans l'article
         article.appendChild(addToCartButton);
         // Ajouter l'article dans la section correspondante
