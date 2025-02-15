@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="/public/css/reset.css"/> <!--Mise en page commune à toutes les pages-->
     <link rel="stylesheet" href="/public/css/navbar.css"/> <!--Mise en page commune à toutes les pages-->
     <link rel="stylesheet" href="/public/css/admin.css"/> <!--Mise en page spécifique à la page-->
@@ -59,41 +58,92 @@
 
     <main>
 
+      <div class="left_area">
+
         <h1 class="dashboard">Administrateur</h1>
-      <aside class="admin_menu">
+        <aside class="admin_menu">
+        <div class="dropdown">
+          <span class="dropdown-text">Menu</span>
+          <i class='bx bxs-down-arrow' style='color:#ffcc00'></i>
+        </div>
+
         <ul class="menu_btns">
+          <li class="cat_btn selected menu_btn">Menu</li>
+
+
           <li class="cat_btn">
-            <button class="menu_btn" data-translate="admin.products_btn">Articles</button>
+            <button class="menu_btn products" data-translate="admin.products_btn">Articles</button>
           </li>
 
           <li class="cat_btn">
-            <button class="menu_btn" data-translate="admin.orders_btn">Commandes</button>
+            <button class="menu_btn orders" data-translate="admin.orders_btn">Commandes</button>
           </li>
           
           <li class="cat_btn">
-            <button class="menu_btn" data-translate="admin.delivers_btn">Livreurs</button>
+            <button class="menu_btn deliverers" data-translate="admin.delivers_btn">Livreurs</button>
           </li>
 
           <li class="cat_btn">
-            <button class="menu_btn" data-translate="admin.clients_btn">Clients</button>
+            <button class="menu_btn clients" data-translate="admin.clients_btn">Clients</button>
           
           <li class="cat_btn">
-            <button class="menu_btn" data-translate="admin.accounts_btn">Caisse</button>
+            <button class="menu_btn accounting" data-translate="admin.accounts_btn">Caisse</button>
           </li>
           
           <li class="cat_btn">
-            <button class="menu_btn" data-translate="admin.info_update_btn">Info clientèle</button>
+            <button class="menu_btn info_update" data-translate="admin.info_update_btn">Info clientèle</button>
           </li>
           
           <li class="cat_btn">
-            <button class="menu_btn" data-translate="admin.recipes_btn">Recettes</button>
+            <button class="menu_btn recipes" data-translate="admin.recipes_btn">Recettes</button>
           </li>
+                            
+        <li class="cat_btn">
+          <button class="menu_btn suppliers" data-translate="supplier.products_btn">Fournisseurs</button>
+        </li>
         </ul>
+      </ul>
+
       </aside>
+    </div>
 
 
       <section class="main_section">
-        <p>Display fetched lists</p>
+        <div class="products display">
+          <h3 class="product_list">Articles</h3>
+        </div>
+
+        <div class="orders display">
+          <h3 class="orders_list">Commandes</h3>
+        </div>
+
+        <div class="deliverers display">
+          <h3 class="deliverers_list">Livreurs</h3>
+        </div>
+
+        <div class="clients display">
+          <h3 class="clients_list">Clients</h3>
+        </div>
+
+        <div class="accounting display">
+          <h3 class="accounting_liste">
+            Caisse
+          </h3>
+        </div>
+
+        <div class="info_update display">
+          <h3 class="informations">
+            Informations
+          </h3>
+        </div>
+
+        <div class="recipes display">
+          <h3 class="recipes_list">Recettes</h3>
+        </div>
+        
+        <div class="suppliers display">
+          <h3 class="suppliers_list">Fournisseurs</h3>
+        </div>
       </section>
     </main>
 
@@ -112,6 +162,7 @@
 
     <script src="/script/darkmode.js"></script>
     <script src="/script/toggle_menu.js"></script>
+    <script src="/script/admin/dropdown.js"></script>
 
   </body>
 </html>
