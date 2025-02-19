@@ -209,6 +209,6 @@ body.dark-mode .greenBtn {
     background-color: var(--dark-green-color);
 }
 
-body.dark-mode i.bx {
+body.dark-mode .bxs-basket, .bxs-user {
     color: whitesmoke !important;
 }

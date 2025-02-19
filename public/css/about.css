@@ -1,17 +1,18 @@
 /* Mise en page mobile-first*/
 
-.legal_info , span, .second_title, table, p {
+.legal_info , span, .second_title, .business_ID, p {
     margin: 0 2rem;
 }
 
 .legal_info {
     margin: 2rem;
     color: var(--gold-color);
+    background-color: var(--dark-text-color);
 }
 
 span.law.info {
     margin-top: 7px;
-    color: rgb(23, 21, 21);
+    color: var(--dark-green-color);
     font-size: 12px;
     display: flex;
     align-content: center;

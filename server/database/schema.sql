@@ -73,7 +73,7 @@ CREATE TABLE orders (
 );
 
 CREATE TABLE products_categories (
-    category_id SERIAL UNIQUE,
+    category_id SERIAL PRIMARY KEY UNIQUE,
     name VARCHAR(50)
 );
 
@@ -81,8 +81,8 @@ INSERT INTO products_categories (name) VALUES
 ('Burritos'),
 ('Poulet'),
 ('Boisson'),
-('Fruit'),
 ('Accompagnement'),
+('Enfant'),
 ('Dessert');
 
 
@@ -105,11 +105,11 @@ CREATE TABLE products (
     product_id SERIAL UNIQUE,
     recipe_id INT REFERENCES recipes(recipe_id) ON DELETE CASCADE,
     name VARCHAR(100) UNIQUE,
-    category_id INT REFERENCES products_categories(category_id) ON DELETE CASCADE,
+    category_id INT NOT NULL REFERENCES products_categories(category_id) ON DELETE CASCADE,
     price DECIMAL(10, 2),
     image TEXT,
     description TEXT,
-    isGrayedOut BOOLEAN DEFAULT FALSE
+    "isGrayedOut" BOOLEAN DEFAULT FALSE
 );
 
 CREATE TABLE products_availability (

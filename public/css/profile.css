@@ -171,7 +171,7 @@ p.user_profile.name {
 
 /* --- Mise en Page Responsive --- */
 @media (min-width: 999px) {
-  main {
+  .profile_main {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 2fr 1fr; /* 2/3 pour infos, 1/3 pour commandes */

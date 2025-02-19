@@ -3,7 +3,7 @@
 
 /* --- Style Global --- */
   
-  main {
+  .admin_main {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -102,7 +102,7 @@
   }
   
   /* --- Section Principale --- */
-  .main_section {
+  .admin_main_section {
     width: 100%; /* Pleine largeur sur mobile */
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -110,14 +110,14 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .main_section p {
+  .admin_main_section p {
     font-size: 1rem;
     color: #555;
   }
   
   /* --- Media Queries pour Tablettes et plus Grands Écrans --- */
   @media (min-width: 768px) {
-    main {
+    .admin_main {
       flex-direction: row;
       gap: 1rem;
     }
@@ -133,14 +133,14 @@
      display: none;
    }
   
-    .main_section {
+    .admin_main_section {
       flex: 3;
     }
 
     .left_area {
       width: 20%;
     }
-    .main_section {
+    .admin_main_section {
       width: 80%;
     }
   }
@@ -150,7 +150,7 @@
       max-width: 300px; /* Limite la largeur du menu */
     }
 
-    .main_section {
+    .admin_main_section {
       padding: 2rem; /* Ajoute un peu d'espace sur les grands écrans */
     }
     .dropdown{
@@ -187,7 +187,7 @@ body.dark-mode .menu_btn:hover {
   color: white;
 }
 
-body.dark-mode .main_section {
+body.dark-mode .admin_main_section {
   background-color: var(--dark-bg-color);
   color: var(--dark-text-color);
 }
