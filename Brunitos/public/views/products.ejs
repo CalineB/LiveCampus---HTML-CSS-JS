@@ -1,16 +1,15 @@
 <%- include('./partials/header.ejs')  %>
 
 <main class="page-product">
-  
+
   <div class="prod_categories">
     <ul class="products">
       <% const categories = ['Burritos', 'Poulet', 'Boisson', 'Accompagnement', 'Enfant', 'Dessert']; %>
+      <!-- Boutons de catégories affichés une seule fois -->
       <% categories.forEach(category => { %>
-        <li class="product">
-          <button data-translate="products.<%= category.toLowerCase() %>">
-            <%= category %>
-          </button>
-        </li>
+        <button data-translate="products.<%= category.toLowerCase() %>">
+          <%= category %>
+        </button>
       <% }); %>
     </ul>
   </div>
@@ -23,7 +22,16 @@
       </h1>
 
       <div class="articles">
-        <% const categoryProducts = products.filter(product => product.category && product.category.toLowerCase() === category.toLowerCase()); %>
+        <% 
+          // Filtrage des produits selon la catégorie
+          const categoryProducts = products.filter(product => 
+            product.category && product.category.toLowerCase() === category.toLowerCase()
+          );
+        %>
+
+        <!-- Vérification du nombre de produits filtrés -->
+        <p>Produits dans la catégorie <%= category %>: <%= categoryProducts.length %></p>
+
         <% if (categoryProducts.length > 0) { %>
           <% categoryProducts.forEach(product => { %>
             <article class="article <%= product.category.toLowerCase() %>">
@@ -41,12 +49,15 @@
             </article>
           <% }) %>
         <% } else { %>
-          <p>Aucun produit disponible.</p>
+          <p>Aucun produit disponible dans cette catégorie.</p>
         <% } %>
       </div>
     </section>
   <% }); %>
 
 </main>
+
+<script src="../script/enable_products.js"></script>
+<script src="../../script/products.js"></script>
 
 <%- include('./partials/footer.ejs')  %>
