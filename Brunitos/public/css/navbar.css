@@ -1,0 +1,241 @@
+:root {
+    --green-color: rgb(72, 101, 27);
+    --red-color: rgb(131, 33, 33);
+    --background-color: rgb(243, 238, 230); /* Couleur de fond claire */
+    --text-color: black; /* Couleur du texte claire */
+    --green-color: rgb(72, 101, 27);
+    --red-color: rgb(131, 33, 33);
+    --gold-color: rgb(180, 147, 37);
+
+        /* Mode nuit */
+        --dark-bg-color: rgb(33, 33, 33);
+        --dark-text-color: rgb(220, 220, 220);
+        --dark-green-color: rgb(103, 158, 60);
+        --dark-red-color: rgb(106, 12, 12);
+        --dark-gold-color: rgb(153, 121, 24);
+
+        
+}
+
+/* Navbar mise en page mobile-first*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.rest_name {
+    margin-left: 1rem;
+    color: var(--green-color);
+}
+
+.rest_name a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--green-color);
+}
+
+.navLinks {
+    display: none; /* Masqué par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: var(--red-color);
+    padding: 1rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    left: 70%;
+    position: absolute;
+}
+
+.menu-btn span {
+    width: 100%;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    right: 5rem;
+}
+
+/* Affiche le menu quand la case toggle est cochée */
+.menu-toggle:checked ~ .navLinks {
+    display: flex;
+}
+
+li.navIcons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Boutons */
+.greenBtn {
+    background-color: var(--green-color);
+    padding: .1rem .2rem;
+    border-radius: 15%;
+}
+
+.greenBtn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Positionner le bouton au-dessus du titre */
+#darkModeToggle {
+    top: -40px;
+    right: 20px;
+    border: var(--gold-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10; /* Permet au bouton d'être au-dessus des autres éléments */
+}
+
+
+@media (min-width: 600px) and (max-width: 769px) {
+
+    .menu-btn span {
+        display: none;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        position: relative;
+        justify-content: space-evenly;
+    }
+
+    .navLinks a {
+        padding: 0.5rem 0;
+    }
+}
+
+  
+
+/* Grands écrans*/
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none; /* Masquer le bouton menu */
+    }
+
+    .navLinks {
+        display: flex; /* Afficher les liens horizontalement */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navLinks a {
+        padding: 0 1rem;
+    }
+
+    .navIcons {
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+  
+/* Mode sombre */
+body.dark-mode {
+    background-color: #150e0eb5; /* Fond sombre */
+    color: white;
+}
+
+body.dark-mode main {
+    background-color: rgb(23, 22, 22); /* Fond sombre */
+    color: white;
+}
+
+
+/* Effet au survol */
+#darkModeToggle:hover {
+    transform: scale(1.1);
+}
+  
+/* Mode clair : lune */
+#darkModeToggle[data-theme="light"] {
+    background-color: rgb(1, 1, 70); /* Bleu foncé */
+}
+  
+/* Mode sombre : soleil */
+#darkModeToggle[data-theme="dark"] {
+    background-color: rgb(32, 154, 224); /* Bleu ciel */
+}
+
+
+body.dark-mode .navbar {
+    background-color: var(--dark-bg-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .rest_name a {
+    color: var(--gold-color);
+}
+
+body.dark-mode .navLinks {
+    background: var(--dark-bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navLinks a {
+    color: var(--background-color);
+}
+
+body.dark-mode .menu-btn span {
+    background: var(--dark-text-color);
+}
+
+body.dark-mode .greenBtn {
+    background-color: var(--dark-green-color);
+}
+
+body.dark-mode .bxs-basket, .bxs-user {
+    color: whitesmoke !important;
+}

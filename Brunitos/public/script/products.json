@@ -1,0 +1,354 @@
+[
+    {
+      "id": 1,
+      "name": "Green Burrito",
+      "category": "burritos",
+      "price": 8.99,
+      "image": "/public/images/burrito1.jpg",
+      "description": "Un burrito vegan avec une garniture de légumes verts et une sauce spéciale.",
+      "availableHours": {
+        "start": "06:30",
+        "end": "10:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 2,
+      "name": "Tofu Burrito",
+      "category": "burritos",
+      "price": 8.99,
+      "image": "/public/images/burrito2.jpeg",
+      "description": "Burrito savoureux garni de tofu et d'épices.",
+      "availableHours": {
+        "start": "06:30",
+        "end": "10:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 3,
+      "name": "Soja Burrito",
+      "category": "burritos",
+      "price": 8.99,
+      "image": "/public/images/burrito3.jpeg",
+      "description": "Burrito délicieux avec du soja et des légumes sautés.",
+      "availableHours": {
+        "start": "06:30",
+        "end": "10:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 4,
+      "name": "Burrito Champignons",
+      "category": "burritos",
+      "price": 8.99,
+      "image": "/public/images/burrito4.jpg",
+      "description": "Un mélange parfait de champignons et de légumes dans un burrito.",
+      "availableHours": {
+        "start": "06:30",
+        "end": "10:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 5,
+      "name": "Burrito Morue",
+      "category": "fried",
+      "price": 8.99,
+      "image": "/public/images/burrito5.jpg",
+      "description": "Burrito au poisson frais avec une sauce aux herbes.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 6,
+      "name": "Burrito Colin",
+      "category": "fried",
+      "price": 8.99,
+      "image": "/public/images/burrito1.jpg",
+      "description": "Un burrito au colin pané, croustillant et savoureux.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 7,
+      "name": "Burrito Thon",
+      "category": "fried",
+      "price": 8.99,
+      "image": "/public/images/burrito2.jpeg",
+      "description": "Burrito thon avec une touche d'épices et de légumes.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 8,
+      "name": "Burrito Viande hachée",
+      "category": "fried",
+      "price": 8.99,
+      "image": "/public/images/burrito3.jpeg",
+      "description": "Un burrito classique garni de viande hachée et de sauce tomate.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 9,
+      "name": "Burrito Poulet grillé",
+      "category": "fried",
+      "price": 8.99,
+      "image": "/public/images/burrito4.jpg",
+      "description": "Poulet grillé mariné aux épices dans un burrito moelleux.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 10,
+      "name": "Burrito Poulet curry",
+      "category": "fried",
+      "price": 8.99,
+      "image": "/public/images/burrito5.jpg",
+      "description": "Burrito au poulet curry et lait de coco.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 5,
+      "name": "Burrito Morue",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito5.jpg",
+      "description": "Burrito au poisson frais avec une sauce aux herbes.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 6,
+      "name": "Burrito Colin",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito1.jpg",
+      "description": "Un burrito au colin pané, croustillant et savoureux.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 7,
+      "name": "Burrito Thon",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito2.jpeg",
+      "description": "Burrito thon avec une touche d'épices et de légumes.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 8,
+      "name": "Burrito Viande hachée",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito3.jpeg",
+      "description": "Un burrito classique garni de viande hachée et de sauce tomate.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 9,
+      "name": "Burrito Poulet grillé",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito4.jpg",
+      "description": "Poulet grillé mariné aux épices dans un burrito moelleux.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 10,
+      "name": "Burrito Poulet curry",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito5.jpg",
+      "description": "Burrito au poulet curry et lait de coco.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 11,
+      "name": "Burrito Poulet curry",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito5.jpg",
+      "description": "Burrito au poulet curry et lait de coco.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 12,
+      "name": "Burrito Agneau grillé",
+      "category": "kids",
+      "price": 8.99,
+      "image": "/public/images/burrito1.jpg",
+      "description": "Un burrito délicieux avec de l'agneau grillé et des épices.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 13,
+      "name": "Mangue",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice6.jpg",
+      "description": "Jus de mangue frais 98.5% de mangue, 1% d'eau, 0.5% de sucre.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 14,
+      "name": "Carottes",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice4.jpg",
+      "description": "Jus de carotte au lait, idéal pour la santé et bien gourmand.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 15,
+      "name": "Goyave",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice5.jpg",
+      "description": "Jus de goyave tropical.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 16,
+      "name": "Fruit de la passion",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice1.jpeg",
+      "description": "Jus de fruit de la passion, passionnément bon.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 17,
+      "name": "Pastèque",
+      "category": "drink",
+      "price": 8.99,
+      "image": "/public/images/juice2.jpg",
+      "description": "Un jus de pastèque rafraîchissant parfait s'hydrater.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 18,
+      "name": "Crème mangue avocat",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cream2.jpg",
+      "description": "Une crème onctueuse de mangue et d'avocat.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 19,
+      "name": "Crème de corosol",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cream1.jpg",
+      "description": "Une douceur exotique à base de corosol sucré et crémeux.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 20,
+      "name": "Gâteau au beurre",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cake1.jpeg",
+      "description": "Cupcake moelleux au beurre.",
+      "availableHours": {
+        "start": "17:45",
+        "end": "20:30"
+      },
+      "isGrayedOut": false
+    },
+    {
+      "id": 21,
+      "name": "Gâteau au chocolat",
+      "category": "dessert",
+      "price": 8.99,
+      "image": "/public/images/cake2.jpg",
+      "description": "Cupcake au chocolat, moelleux.",
+      "availableHours": {
+        "start": "00:00",
+        "end": "23:59"
+      },
+      "isGrayedOut": false
+    }
+  ]
+  

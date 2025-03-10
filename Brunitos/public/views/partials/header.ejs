@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRUN'ITOS Carte</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/reset.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/css/navbar.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/css/products.css"/> <!--Mise en page spécifique à la page-->
+    <link rel="stylesheet" href="/css/footer.css"/> <!--Mise en page générale à toutes les pages-->
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/basket.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/order.css">
+    <link rel="stylesheet" href="/css/profile.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+      <h2 class="rest_name">
+        <a href="/">Brun'Itos</a>
+        <a href="panier">
+          <i class="bx bxs-basket bx-tada"
+            style="color: rgba(40, 93, 16, 0.48)">
+          </i>
+        </a>
+      </h2>
+
+      <!-- boutton toggle (menu drop) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="navLinks">
+        <li class="navLink" data-translate="nav.home">
+          <a href="/">Accueil</a>
+        </li>
+        <li class="navLink" data-translate="nav.card">
+          <a href="produits">Carte</a>
+        </li>
+        <li class="navLink" data-translate="nav.about">
+          <a href="informations">À propos</a>
+        </li>
+        <li class="navIcons">
+          <a href="profil">
+            <i class="bx bxs-user" style="color: rgba(183, 148, 10, 0.71)"></i>
+          </a>
+          <button class="green greenBtn" data-translate="nav.connect">
+            <a href="connexion">Se connecter</a>
+          </button>
+
+          <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+        </li>
+      </ul>
+    </nav>

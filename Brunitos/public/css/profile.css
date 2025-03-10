@@ -1,0 +1,309 @@
+/* Mise en page mobile-first*/
+
+/* --- Titres Généraux --- */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  color: var(--gold-color);
+  text-align: center;
+  box-shadow: inset calc(50% - 50px) -2px 0 var(--green-color);
+  position: relative;
+  z-index: 1;
+  background-color: darkblue;
+}
+
+/* --- Section Principale : Informations Utilisateur --- */
+section.profile.info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section.profile.info .user_correspondance {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.profile.info .user_correspondance h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+section.profile.info .user_correspondance p,
+section.profile.info .user_correspondance address,
+section.profile.info .user_correspondance a {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+section.profile.info .user_img {
+  text-align: center;
+}
+
+section.profile.info .user_img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-color);
+}
+
+section.profile.info .account {
+  text-align: center;
+}
+
+section.profile.info .account button {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+section.profile.info .account .update_profile {
+  background-color: var(--green-color);
+}
+
+section.profile.info .account .delete_profile {
+  background-color: #e53935;
+}
+
+/* --- Section Commandes --- */
+section.profile.order {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+section.profile.order h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+section.profile.order .bonus {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+section.profile.order .miams_points {
+  color: #ff9800;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+/* Tableau des commandes */
+section.profile.order .order_listing {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+section.profile.order .order_listing th,
+section.profile.order .order_listing td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  color: black;
+}
+
+section.profile.order .order_listing .order_total {
+  text-align: right;
+  font-weight: bold;
+  color: var(--green-color);
+}
+
+section.profile.order .order_listing tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+p.user_profile.name {
+  color: var(--green-color);
+  font-weight: bold;
+}
+
+#file_input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+#change_pic {
+  position: relative;
+  padding: 10px 20px;
+  border: 1px dashed var(--gold-color);
+  background: transparent;
+  cursor: pointer;
+  background-color: var(--green-color);
+}
+
+#change_pic:hover {
+  background-color: var(--gold-color);
+  color: #fff;
+}
+
+
+.bonus {
+  text-align: center;
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* --- Mise en Page Responsive --- */
+@media (min-width: 999px) {
+  .profile_main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 2fr 1fr; /* 2/3 pour infos, 1/3 pour commandes */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    grid-column: span 2; /* Le titre s'étale sur toute la largeur */
+  }
+
+  section.profile.info {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+
+  section.profile.order {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.profile.order {
+    padding: 25px;
+    border-radius: 12px;
+  }
+
+  section.profile.order h4 {
+    font-size: 1.5em;
+  }
+
+  section.profile.info {
+    padding: 25px;
+    border-radius: 12px;
+  }
+}
+
+
+/* --- Titres Généraux --- */
+body.dark-mode h1 {
+  color: rgb(153, 121, 24); /* Texte */
+  background-color: rgb(33, 33, 33); /* Darkmode background */
+  box-shadow: inset calc(50% - 50px) -2px 0 rgb(103, 158, 60); /* Ombre verte */
+}
+
+/* --- Section Principale : Informations Utilisateur --- */
+body.dark-mode section.profile.info {
+  background-color: rgb(33, 33, 33); /* Background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+body.dark-mode section.profile.info .user_correspondance h3 {
+  color: rgb(220, 220, 220); /* Texte*/
+}
+
+body.dark-mode section.profile.info .user_correspondance p,
+body.dark-mode section.profile.info .user_correspondance address,
+body.dark-mode section.profile.info .user_correspondance a {
+  color: rgb(153, 153, 153); /* Texte */
+}
+
+body.dark-mode section.profile.info .user_img img {
+  border-color: rgb(153, 121, 24); /* Bordure */
+}
+
+body.dark-mode section.profile.info .account button {
+  color: rgb(33, 33, 33); /* Texte */
+}
+
+body.dark-mode section.profile.info .account .update_profile {
+  background-color: rgb(103, 158, 60); /* Couleur background*/
+}
+
+body.dark-mode section.profile.info .account .delete_profile {
+  background-color: rgb(230, 57, 53); /* Fond (background) */
+}
+
+/* --- Section Commandes --- */
+body.dark-mode section.profile.order {
+  background-color: rgb(33, 33, 33); /* Darkmode background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+body.dark-mode section.profile.order h4 {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode section.profile.order .bonus {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode section.profile.order .miams_points {
+  color: rgb(255, 152, 0); /* Texte */
+}
+
+/* Tableau des commandes */
+body.dark-mode section.profile.order .order_listing th,
+body.dark-mode section.profile.order .order_listing td {
+  color: rgb(220, 220, 220); /* Texte */
+  border-bottom: 1px solid rgb(77, 77, 77); /* Bordure */
+}
+
+body.dark-mode section.profile.order .order_listing tbody tr:nth-child(odd) {
+  background-color: rgb(44, 44, 44); /* Fond */
+}
+
+body.dark-mode section.profile.order .order_listing .order_total {
+  color: rgb(103, 158, 60); /* Prix */
+}
+
+body.dark-mode p.user_profile.name {
+  color: rgb(103, 158, 60); /* Texte */
+}
+
+/* --- Gestion de l'upload et du bouton d'image --- */
+body.dark-mode #change_pic {
+  border-color: rgb(153, 121, 24); /* Bordure */
+  background-color: rgb(103, 158, 60); /* Fond */
+  color: rgb(33, 33, 33); /* Texte */
+}
+
+body.dark-mode #change_pic:hover {
+  background-color: rgb(153, 121, 24); /* Fond */
+  color: whitesmoke; /* Texte */
+}
+
+/* --- Bonus et Pagination --- */
+body.dark-mode .bonus {
+  color: rgb(220, 220, 220); /* Texte */
+}
+
+body.dark-mode .pagination {
+  color: rgb(220, 220, 220); /* Texte */
+}

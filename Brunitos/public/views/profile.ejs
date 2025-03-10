@@ -1,0 +1,71 @@
+<%- include('./partials/header.ejs')  %>
+
+
+    <main class="profile_main">
+
+      <h1 class="welcome" data-translate="profile.welcome">Bienvenue user.name||Aka</h1>
+
+      <section class="profile info">
+
+        <div class="user_img">
+          <img src="/images/profile.png" alt="profil_picture">
+          <div class="img_settings">
+            <label id="change_pic" for="file_input">Changer de photo</label>
+            <input type="file" id="file_input" accept="image/*">
+          </div>
+        </div>
+
+        <div class="user_correspondance">
+          <h3 class="profile_data" data-translate="profile.profile">Informations utilisateur</h3>
+          <p class="user_profile name" data-translate="profile.users_name">Biggy</p>
+          <address class="user_profile address" data-translate="profile.user_address">
+            Addresse fourni par l'utilisateur
+            <br>
+            Ligne supplémentaire
+            <br>
+            Code postale et ville
+          </address>
+          <a class="user_profile phone" href="tel:+33707070707">07 07 07 07 07</a>
+          <br>
+          <a href="mailto" class="user_profile email">biggy@eater.com</a>
+        </div>
+
+        <div class="account">
+          <button class="update_profile" data-translate="profile.update_profile">Modifier mes informations</button>
+          <button class="delete_profile" data-translate="profile.delete_profile">Supprimer mon compte</button>
+        </div>
+      </section>
+
+
+      <section class="profile order">
+        <h4 class="order_history" data-translate="profile.orders_history">Mes commandes</h4>
+        <b class="bonus" data-translate="profile.bonus">
+          Points de fidélité
+          <span class="miams_points">58 Miams</span>
+        </b>
+
+
+        <table class="order_listing" data-translate="profil.orders_list">
+          <tbody>
+            <tr>
+              <th class="date" scope="row" data-translate="order.order_date:id">12 janvier 2025 - 12:58</th>
+              <td class="order_total" data-translate="order.sum">€27.44<i class='bx bxs-arrow-from-left' style='color:#48651b'></i></td>
+            </tr>
+
+            <tr>
+              <th class="date" scope="row" data-translate="order.order_date:id">order:id.date - order:id.timestamp</th>
+              <td class="order_total" data-translate="order.sum">€order:id.price<i class='bx bxs-arrow-from-left' style='color:#48651b'></i></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <span class="current-page" data-translate="pagination.current">Page 1</span>
+          /
+          <span class="total-pages" data-translate="pagination.total">1</span>
+        </div>
+      </section>
+
+    </main>
+
+    <%- include('./partials/footer.ejs')  %>

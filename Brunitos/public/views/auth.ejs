@@ -1,0 +1,31 @@
+<%- include('./partials/header.ejs')  %>
+
+
+    <main>
+
+      <form action="/profile.html" method="get">
+
+        <h2 class="auth_title">Se connecter</h2>
+
+        <input type="varchar"><label for="identification">Email ou Téléphone</label>
+        <br>
+        <input type="password"><label for="password">Mot de passe</label>
+        <a href="/reset_psw.html">
+          <i class="forget_psw" data-translate="auth.lost_psw">Mot de passe oublié</i>
+        </a>
+
+        <div class="btn_group">
+          <input type="submit" id="submit-button" value="Se connecter" class="btn" data-translate="connection.submit_btn">
+        
+          <button type="button" id="register-button" class="btn register" data-translate="auth.register_redirection_btn" onclick="window.location.href='register.html'">
+            Créer un compte
+          </button>
+        </div>
+
+  
+      </form>
+
+
+    </main>
+
+    <%- include('./partials/footer.ejs')  %>

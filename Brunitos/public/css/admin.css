@@ -1,0 +1,193 @@
+/* Mise en page mobile-first*/
+
+
+/* --- Style Global --- */
+  
+  .admin_main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* --- Titre Principal --- */
+  h1.dashboard {
+    font-size: .9rem;
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: var(--gold-color);
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    box-shadow: inset calc(50% - 50px) -2px 0 var(--green-color);
+    background: rgb(56, 56, 56);
+    padding: 10px 5px;
+  }
+
+  
+  /* --- Menu Latéral --- */
+
+  aside.admin_menu {
+    margin-top: 1rem;
+  }
+
+  .dropdown {
+    width: 10rem;
+    background: var(--black-color);
+    color: var(--yellow-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    margin: .5rem auto;
+}
+
+.bxs-down-arrow {
+    z-index: 1;
+}
+
+.dropdown::after {
+    font-size: 12px;
+}
+
+
+  .admin_menu {
+    width: 100%; /* Occupe toute la largeur sur mobile */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin_menu .menu_btns {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu_btns {
+    display: none;
+  }
+
+  .menu_btns.active {
+    display: block;
+  }
+  
+  .admin_menu .cat_btn {
+    margin-bottom: 1rem;
+  }
+  
+  .admin_menu .menu_btn {
+    width: 100%; /* Boutons larges sur mobile */
+    padding: 0.8rem;
+    font-size: 1rem;
+    text-align: left;
+    background-color: var(--gold-color);
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .admin_menu .menu_btn:hover {
+    background-color: var(--green-color);
+    color: white;
+    text-align: center;
+  }
+  
+  /* --- Section Principale --- */
+  .admin_main_section {
+    width: 100%; /* Pleine largeur sur mobile */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin_main_section p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* --- Media Queries pour Tablettes et plus Grands Écrans --- */
+  @media (min-width: 768px) {
+    .admin_main {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .dropdown {
+      display: none;
+  }
+
+  .menu_btns {
+    display: block !important;
+  }
+  
+   li.cat_btn.selected {
+     display: none;
+   }
+  
+    .admin_main_section {
+      flex: 3;
+    }
+
+    .left_area {
+      width: 20%;
+    }
+    .admin_main_section {
+      width: 80%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .admin_menu {
+      max-width: 300px; /* Limite la largeur du menu */
+    }
+
+    .admin_main_section {
+      padding: 2rem; /* Ajoute un peu d'espace sur les grands écrans */
+    }
+    .dropdown{
+      display: none;
+    }
+
+    li.cat_btn.selected {
+      display: none;
+    }
+  }
+  
+
+
+/* Mode nuit */
+body.dark-mode h1.dashboard {
+  color: var(--dark-gold-color);
+  background: var(--dark-red-color);
+  box-shadow: inset calc(50% - 50px) -2px 0 var(--dark-green-color);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .admin_menu {
+  background-color: var(--dark-bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .menu_btn {
+  background-color: var(--dark-gold-color);
+  color: var(--dark-bg-color);
+}
+
+body.dark-mode .menu_btn:hover {
+  background-color: var(--dark-red-color);
+  color: white;
+}
+
+body.dark-mode .admin_main_section {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+}
