@@ -2,12 +2,12 @@ const { Product, ProductAvailability } = require('../../server/models');
 
 const renderProducts = async (_, res) => {
     try {
-        const currentDay = new Intl.DateTimeFormat("en-US", { 
+        const currentDay = new Intl.DateTimeFormat("en-GB", { 
             timeZone: "America/Guadeloupe", 
             weekday: "long" 
         }).format(new Date());
 
-        const currentTime = new Intl.DateTimeFormat("en-US", {
+        const currentTime = new Intl.DateTimeFormat("en-GB", {
             timeZone: "America/Guadeloupe",
             hour: "2-digit",
             minute: "2-digit",
@@ -51,12 +51,22 @@ const renderProducts = async (_, res) => {
                 const startInt = timeToInt(start_time);
                 const endInt = timeToInt(end_time);
         
-                // Griser uniquement si l'heure actuelle est en dehors du créneau
-                product.isGrayedOut = !(currentInt >= startInt && currentInt <= endInt);
+               /* console.log(`Produit: ${product.name}`);
+                console.log(`Heure actuelle: ${currentInt}`);
+                console.log(`Créneau: ${start_time} - ${end_time}`);
+                console.log(`StartInt: ${startInt}, EndInt: ${endInt}`); */
+        
+                // Comparaison directe de l'heure actuelle avec le créneau
+                const isNotInRange = !(currentInt >= startInt && currentInt <= endInt);
+                console.log(`Produit ${product.name} doit-il être grisé ? : ${isNotInRange}`);
+        
+                // Appliquer la logique de grisé si l'heure actuelle est en dehors du créneau
+                product.isGrayedOut = isNotInRange;
             } else {
-                product.isGrayedOut = false; // ✅ On laisse actif si pas de créneau défini
+                product.isGrayedOut = false; // Si pas de créneau, ne pas griser
             }
         });
+        
         
         
         
