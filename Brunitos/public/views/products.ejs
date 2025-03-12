@@ -23,10 +23,10 @@
       </h1>
 
       <div class="articles">
-        <% const categoryProducts = products.filter(product => product.category && product.category.toLowerCase() === category.toLowerCase()); %>
+        <% const categoryProducts = products.filter(product => product.category_id === (categories.indexOf(category) + 1)); %>
         <% if (categoryProducts.length > 0) { %>
           <% categoryProducts.forEach(product => { %>
-            <article class="article <%= product.category.toLowerCase() %>">
+            <article class="article <%= product.category ? product.category.toLowerCase() : '' %> <%= product.isGrayedOut ? 'disabled' : '' %>">
               <img src="<%= product.image %>" alt="<%= product.name %>" />
               <p class="art_name">
                 <%= product.name %><span>€ <%= parseFloat(product.price).toFixed(2) %></span>
@@ -39,7 +39,7 @@
                 Ajouter au panier
               </button>
             </article>
-          <% }) %>
+          <% }) %>               
         <% } else { %>
           <p>Aucun produit disponible.</p>
         <% } %>
@@ -48,5 +48,7 @@
   <% }); %>
 
 </main>
+
+<script src="../../script/products.js"></script>
 
 <%- include('./partials/footer.ejs')  %>

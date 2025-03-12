@@ -172,7 +172,7 @@ h1::before {
   
 
 /*Mise à jour style grisatrre en dehors des horaires de disponibilités*/
-.grayed-out {
+.disabled {
     opacity: 0.5;
     background-color: #f0f0f0;
     pointer-events: none;

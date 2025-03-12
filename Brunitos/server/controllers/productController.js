@@ -7,7 +7,24 @@ const renderProducts = async (_, res) => {
             weekday: "long" 
         }).format(new Date());
 
-        console.log("Jour actuel (Guadeloupe) :", currentDay);
+        const currentTime = new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/Guadeloupe",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+        }).format(new Date());
+
+        // Fonction pour convertir une heure sous format HH:mm:ss en minutes
+        const timeToInt = (timeString) => {
+            if (!timeString) return null;
+            const [hours, minutes, seconds] = timeString.split(':').map(Number);
+            return hours * 60 + (minutes || 0) + (seconds || 0) / 60;
+        };
+
+        const currentInt = timeToInt(currentTime);
+
+        console.log("Jour actuel :", currentDay);
+        console.log("Heure actuelle :", currentTime, `(convertie: ${currentInt})`);
 
         // Récupération des produits avec leurs créneaux horaires
         const products = await Product.findAll({
@@ -16,7 +33,7 @@ const renderProducts = async (_, res) => {
                     model: ProductAvailability,
                     as: 'product_availabilities',
                     where: { day_of_week: currentDay },
-                    required: false, // Permet de récupérer les produits même sans disponibilités
+                    required: false,
                     attributes: ['start_time', 'end_time'] 
                 }
             ]
@@ -27,9 +44,22 @@ const renderProducts = async (_, res) => {
             return res.status(404).render('products', { products: [], error: 'Aucun produit trouvé pour ce jour.' });
         }
 
-        console.log("Produits récupérés:", products);
-
-        // Rendre la vue avec les produits récupérés
+        // Vérifier la disponibilité et mettre à jour isGrayedOut
+        products.forEach(product => {
+            if (product.product_availabilities.length > 0) {
+                const { start_time, end_time } = product.product_availabilities[0];
+                const startInt = timeToInt(start_time);
+                const endInt = timeToInt(end_time);
+        
+                // Griser uniquement si l'heure actuelle est en dehors du créneau
+                product.isGrayedOut = !(currentInt >= startInt && currentInt <= endInt);
+            } else {
+                product.isGrayedOut = false; // ✅ On laisse actif si pas de créneau défini
+            }
+        });
+        
+        
+        
         res.render('products', { products });
 
     } catch (error) {
