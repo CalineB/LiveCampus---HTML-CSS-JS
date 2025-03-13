@@ -13,42 +13,39 @@
         </div>
 
         <ul class="menu_btns">
-          <li class="cat_btn selected menu_btn">Menu</li>
-
-
+  
           <li class="cat_btn">
-            <button class="menu_btn products" data-translate="admin.products_btn">Articles</button>
+            <button class="menu_btn products" data-translate="admin.products_btn" data-category="products">Articles</button>
           </li>
 
           <li class="cat_btn">
-            <button class="menu_btn orders" data-translate="admin.orders_btn">Commandes</button>
+            <button class="menu_btn orders" data-translate="admin.orders_btn" data-category="orders">Commandes</button>
           </li>
           
           <li class="cat_btn">
-            <button class="menu_btn deliverers" data-translate="admin.delivers_btn">Livreurs</button>
+            <button class="menu_btn deliverers" data-translate="admin.delivers_btn" data-category="deliverers">Livreurs</button>
           </li>
 
           <li class="cat_btn">
-            <button class="menu_btn clients" data-translate="admin.clients_btn">Clients</button>
+            <button class="menu_btn clients" data-translate="admin.clients_btn" data-category="clients">Clients</button>
           
           <li class="cat_btn">
-            <button class="menu_btn accounting" data-translate="admin.accounts_btn">Caisse</button>
+            <button class="menu_btn accounting" data-translate="admin.accounts_btn" data-category="accounting">Caisse</button>
           </li>
           
           <li class="cat_btn">
-            <button class="menu_btn info_update" data-translate="admin.info_update_btn">Info clientèle</button>
+            <button class="menu_btn info_update" data-translate="admin.info_update_btn"  data-category="info_update">Info clientèle</button>
           </li>
           
           <li class="cat_btn">
-            <button class="menu_btn recipes" data-translate="admin.recipes_btn">Recettes</button>
+            <button class="menu_btn recipes" data-translate="admin.recipes_btn" data-category="recipes">Recettes</button>
           </li>
                             
         <li class="cat_btn">
-          <button class="menu_btn suppliers" data-translate="supplier.products_btn">Fournisseurs</button>
+          <button class="menu_btn suppliers" data-translate="supplier.products_btn" data-category="suppliers">Fournisseurs</button>
         </li>
         </ul>
       </ul>
-
       </aside>
     </div>
 
@@ -71,15 +68,11 @@
         </div>
 
         <div class="accounting display">
-          <h3 class="accounting_liste">
-            Caisse
-          </h3>
+          <h3 class="accounting_liste">Caisse</h3>
         </div>
 
         <div class="info_update display">
-          <h3 class="informations">
-            Informations
-          </h3>
+          <h3 class="informations">Informations</h3>
         </div>
 
         <div class="recipes display">
@@ -92,6 +85,6 @@
       </section>
     </main>
     
-    <script src="../../script/admin/dropdown.js"></script>
+    <script src="../script/admin/dropdown.js"></script>
 
     <%- include('./partials/footer.ejs')  %>

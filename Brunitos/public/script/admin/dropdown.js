@@ -3,11 +3,12 @@ const dropdown = document.querySelector(".dropdown");
 const dropdownText = document.querySelector(".dropdown-text");
 const menuList = document.querySelector(".menu_btns");
 const menuButtons = document.querySelectorAll(".menu_btns button.menu_btn");
-const productSections = document.querySelectorAll(".main_section .display");
+const adminMainSection = document.querySelector(".admin_main_section");
+const allSections = document.querySelectorAll(".admin_main_section .display");
 
 // Au clic sur le dropdown, on bascule l'affichage du menu
 dropdown.addEventListener("click", function (event) {
-  event.stopPropagation(); // Empêche la fermeture immédiate
+  event.stopPropagation();
   menuList.classList.toggle("active");
 });
 
@@ -23,17 +24,25 @@ menuButtons.forEach(button => {
     // Ferme le menu déroulant
     menuList.classList.remove("active");
 
-    // Gestion de l'affichage des sections correspondantes
-    const selectedCategory = this.classList[1]; // Supposant que la 2e classe est la catégorie
+    // Ajoute la classe 'selected' au bouton cliqué et la supprime des autres
+    menuButtons.forEach(btn => btn.classList.remove("selected"));
+    this.classList.add("selected");
 
-    if (selectedCategory) {
-      productSections.forEach(section => {
-        section.style.display = section.classList.contains(selectedCategory) ? "block" : "none";
-      });
+    // Récupère la catégorie sélectionnée (data-category)
+    const selectedCategory = this.getAttribute("data-category");
+    console.log("Catégorie sélectionnée :", selectedCategory);
+
+    // Masquer toutes les sections
+    allSections.forEach(section => section.style.display = "none");
+
+    // Afficher uniquement la section qui correspond à la catégorie sélectionnée
+    const matchedDiv = document.querySelector(`.admin_main_section .${selectedCategory}`);
+    
+    if (matchedDiv) {
+      matchedDiv.style.display = "block";
+      console.log(`Affichage unique de la section : .${selectedCategory}`);
     } else {
-      productSections.forEach(section => {
-        section.style.display = "block";
-      });
+      console.log("Aucune div trouvée avec cette classe dans .admin_main_section !");
     }
   });
 });
