@@ -1,6 +1,6 @@
 /* Mise en page mobile-first*/
 
-.legal_info , span, .second_title, .business_ID, p {
+.legal_info , .law.info, .second_title, .business_ID, p {
     margin: 0 2rem;
 }
 
@@ -10,7 +10,7 @@
     background-color: var(--dark-text-color);
 }
 
-span.law.info {
+.law.info {
     margin-top: 7px;
     color: var(--dark-green-color);
     font-size: 12px;

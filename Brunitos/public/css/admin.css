@@ -52,6 +52,15 @@
     font-size: 12px;
 }
 
+.display {
+  display: none;
+}
+
+.display.active {
+  display: block;
+}
+
+
 
   .admin_menu {
     width: 100%; /* Occupe toute la largeur sur mobile */
@@ -84,7 +93,6 @@
     width: 100%; /* Boutons larges sur mobile */
     padding: 0.8rem;
     font-size: 1rem;
-    text-align: left;
     background-color: var(--gold-color);
     color: #333;
     border: none;
@@ -101,9 +109,13 @@
     text-align: center;
   }
   
+  .products {
+    margin-top: 1rem;
+  }
+
   /* --- Section Principale --- */
   .admin_main_section {
-    width: 100%; /* Pleine largeur sur mobile */
+    width: 100%;
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 1.5rem;

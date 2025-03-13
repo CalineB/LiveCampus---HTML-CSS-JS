@@ -79,7 +79,7 @@
 }
 
 .paiement {
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 
 .total {
@@ -123,8 +123,17 @@ i.qnt.many_article  {
 
 
 .sum_details {
-  width: 100%;
+  width: 50%;
   border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.sum_details th, .sum_details td {
+  vertical-align: middle; 
+}
+
+.sum_details tbody {
+  text-align: center; 
 }
 
   
@@ -169,6 +178,10 @@ i.qnt.many_article  {
   
     .basket_articles {
       flex: 2; /* Occupe 3/3 de l'espace */
+    }
+
+    .toBuy {
+      height: fit-content;
     }
 
     .sum {
