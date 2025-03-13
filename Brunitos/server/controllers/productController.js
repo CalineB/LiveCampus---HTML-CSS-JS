@@ -2,24 +2,30 @@ const { Product, ProductAvailability } = require('../../server/models');
 
 const renderProducts = async (_, res) => {
     try {
-        const currentTime = new Intl.DateTimeFormat("en-GB", {  // Format 24 heures
+        const currentDay = new Intl.DateTimeFormat("en-GB", { 
+            timeZone: "America/Guadeloupe", 
+            weekday: "long" 
+        }).format(new Date());
+
+        const currentTime = new Intl.DateTimeFormat("en-GB", {
             timeZone: "America/Guadeloupe",
             hour: "2-digit",
             minute: "2-digit",
             second: "2-digit",
         }).format(new Date());
-        
+
         // Fonction pour convertir une heure sous format HH:mm:ss en minutes
         const timeToInt = (timeString) => {
             if (!timeString) return null;
             const [hours, minutes, seconds] = timeString.split(':').map(Number);
             return hours * 60 + (minutes || 0) + (seconds || 0) / 60;
         };
-        
-        // Convertir l'heure actuelle
+
         const currentInt = timeToInt(currentTime);
-        console.log("Heure actuelle :", currentTime, `(convertie: ${currentInt})`);
-        
+
+        console.log("Jour actuel :", currentDay);
+        console.log(`Heure actuelle : ${currentTime}, convertie : ${currentInt}`);
+
         // Récupération des produits avec leurs créneaux horaires
         const products = await Product.findAll({
             include: [
