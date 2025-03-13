@@ -2,30 +2,24 @@ const { Product, ProductAvailability } = require('../../server/models');
 
 const renderProducts = async (_, res) => {
     try {
-        const currentDay = new Intl.DateTimeFormat("en-GB", { 
-            timeZone: "America/Guadeloupe", 
-            weekday: "long" 
-        }).format(new Date());
-
-        const currentTime = new Intl.DateTimeFormat("en-GB", {
+        const currentTime = new Intl.DateTimeFormat("en-GB", {  // Format 24 heures
             timeZone: "America/Guadeloupe",
             hour: "2-digit",
             minute: "2-digit",
             second: "2-digit",
         }).format(new Date());
-
+        
         // Fonction pour convertir une heure sous format HH:mm:ss en minutes
         const timeToInt = (timeString) => {
             if (!timeString) return null;
             const [hours, minutes, seconds] = timeString.split(':').map(Number);
             return hours * 60 + (minutes || 0) + (seconds || 0) / 60;
         };
-
+        
+        // Convertir l'heure actuelle
         const currentInt = timeToInt(currentTime);
-
-        console.log("Jour actuel :", currentDay);
         console.log("Heure actuelle :", currentTime, `(convertie: ${currentInt})`);
-
+        
         // Récupération des produits avec leurs créneaux horaires
         const products = await Product.findAll({
             include: [
@@ -51,25 +45,23 @@ const renderProducts = async (_, res) => {
                 const startInt = timeToInt(start_time);
                 const endInt = timeToInt(end_time);
         
-               /* console.log(`Produit: ${product.name}`);
+                console.log(`Produit: ${product.name}`);
                 console.log(`Heure actuelle: ${currentInt}`);
                 console.log(`Créneau: ${start_time} - ${end_time}`);
-                console.log(`StartInt: ${startInt}, EndInt: ${endInt}`); */
+                console.log(`StartInt: ${startInt}, EndInt: ${endInt}`);
+                console.log(`Grisé ? : ${!(currentInt >= startInt && currentInt <= endInt)}`);
         
-                // Comparaison directe de l'heure actuelle avec le créneau
-                const isNotInRange = !(currentInt >= startInt && currentInt <= endInt);
-                console.log(`Produit ${product.name} doit-il être grisé ? : ${isNotInRange}`);
-        
-                // Appliquer la logique de grisé si l'heure actuelle est en dehors du créneau
-                product.isGrayedOut = isNotInRange;
+                // Griser uniquement si l'heure actuelle est en dehors du créneau
+                product.isGrayedOut = !(currentInt >= startInt && currentInt <= endInt);
             } else {
-                product.isGrayedOut = false; // Si pas de créneau, ne pas griser
+                product.isGrayedOut = false; // Pas de créneau, pas grisé
             }
         });
         
         
-        
-        
+
+        console.log("Produits après mise à jour :", products);
+
         res.render('products', { products });
 
     } catch (error) {
