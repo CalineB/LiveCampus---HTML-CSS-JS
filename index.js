@@ -1,48 +1,28 @@
-require('dotenv').config();
-const debug = require('debug')('app:server');
-const cors = require('cors');
-
 const express = require('express');
-const session = require('express-session');
-const path = require('path')
+const path = require('path');
+const cors = require('cors');
 
 
 const app = express();
 
 app.use(cors({ origin: '*' }));
 
-/* app runs on .env variable or default PORT */
-const port = process.env.PORT || 4000;
 
-
-/* require router file */
-const router = require('./server/routes');
-
-app.use(cors({ origin: '*' }));
-
-/* send bodies in json format */
-app.use(express.json());
-
-// Configure EJS as the view engine
+// Définir le moteur de template
 app.set('view engine', 'ejs');
-app.set('views', './public/views');
+app.set('views', [path.join(__dirname, 'views')]);
 
-
-app.use(express.urlencoded({ extended: true }));
-app.use(router);
-
-app.use(express.static(path.join(__dirname, './public/views')));
+// CSS de notre page d'accueil et de chaque restaurants
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/script', express.static('script'));
 
 
-// Session middleware
-app.use(session({
-  secret: 'secret-key',
-  resave: false,
-  saveUninitialized: true,
-}));
+// Route pour la page d'accueil UX-IX (en dehors de views/)
+app.get('/uxui-restaurants', (req, res) => {
+    res.render(path.join(__dirname, 'index'));
+});
 
-app.listen(port, () => {
-  console.log(`Server ready: http://localhost:${port}`);
+
+const PORT = 3030;
+app.listen(PORT, () => {
+    console.log(`Serveur en écoute sur http://localhost:${PORT}/uxui-restaurants`);
 });
