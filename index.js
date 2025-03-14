@@ -10,15 +10,18 @@ app.use(cors({ origin: '*' }));
 
 // Définir le moteur de template
 app.set('view engine', 'ejs');
-app.set('views', [path.join(__dirname, 'views')]);
 
-// CSS de notre page d'accueil et de chaque restaurants
+// CSS et medias
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Route pour la page d'accueil UX-IX (en dehors de views/)
 app.get('/uxui-restaurants', (req, res) => {
     res.render(path.join(__dirname, 'index'));
+});
+
+app.get("/boissons", (req, res) => {
+    res.render(path.join(__dirname, "drinks"));
 });
 
 
