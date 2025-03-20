@@ -1,0 +1,44 @@
+<%- include('./partials/header.ejs')  %>
+<link rel="stylesheet" href="../css/order_page.css">
+
+<form action="/confirm-order" method="POST">
+    <h2>Choisissez votre mode de récupération</h2>
+    <label>
+        <input type="radio" name="delivery_method" value="livraison" required checked> Livraison
+    </label>
+    <label>
+        <input type="radio" name="delivery_method" value="sur_place"> Sur place
+    </label>
+    <label>
+        <input type="radio" name="delivery_method" value="a_emporter"> À emporter
+    </label>
+
+    <h2>Choisissez votre créneau horaire</h2>
+    <select id="timeSlot" name="time_slot">
+        <!-- Options générées dynamiquement -->
+    </select>
+
+    <h2>Choisissez votre moyen de paiement</h2>
+    <label>
+        <input type="radio" name="payment_method" value="carte_bancaire" required checked> Carte Bancaire
+    </label>
+    <label>
+        <input type="radio" name="payment_method" value="crypto"> Crypto
+    </label>
+    <label>
+        <input type="radio" name="payment_method" value="virement"> Virement immédiat
+    </label>
+    <label>
+        <input type="radio" name="payment_method" value="paylib"> Paylib
+    </label>
+    <label>
+        <input type="radio" name="payment_method" value="especes" id="cashPayment" disabled> Espèces
+    </label>
+
+    <button type="submit">Valider ma commande</button>
+</form>
+
+<script src="../script/order_page.js"></script>
+<script src="../script/delivery_payment.js"></script>
+
+<%- include('./partials/footer.ejs')  %>

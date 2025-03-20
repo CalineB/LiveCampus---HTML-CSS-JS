@@ -18,6 +18,7 @@ router.get('/admin', adminController.renderAdmin);
 router.get('/users', userController.renderUsers);
 router.get('/connexion', authController.renderAuth);
 router.get('/panier', basketController.renderBasket);
+router.get('/commander', basketController.renderOrder);
 router.get('/commandes', orderController.renderOrders);
 router.get('/produits', productController.renderProducts);
 router.get('/profil', homeController.renderProfile);

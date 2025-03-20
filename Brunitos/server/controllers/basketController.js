@@ -20,4 +20,8 @@ const renderBasket = (req, res) => {
   }
 };
 
-  module.exports = { renderBasket };
+const renderOrder = (req, res) => {
+  res.render('order_page')
+}
+
+  module.exports = { renderBasket, renderOrder };

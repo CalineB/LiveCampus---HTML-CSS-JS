@@ -27,6 +27,11 @@
         <% if (categoryProducts.length > 0) { %>
           <% categoryProducts.forEach(product => { %>
             <article class="article <%= product.category ? product.category.toLowerCase() : '' %> <%= product.isGrayedOut ? 'disabled' : '' %>">
+              <% if (product.isGrayedOut) { %>
+                <div class="availability-banner">
+                  Disponible de <%= product.product_availabilities[0].start_time %> à <%= product.product_availabilities[0].end_time %>
+                </div>
+              <% } %>
               <img src="<%= product.image %>" alt="<%= product.name %>" />
               <p class="art_name">
                 <%= product.name %><span>€ <%= parseFloat(product.price).toFixed(2) %></span>
@@ -39,6 +44,7 @@
                 Ajouter au panier
               </button>
             </article>
+            
           <% }) %>               
         <% } else { %>
           <p>Aucun produit disponible.</p>

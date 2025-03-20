@@ -1,6 +1,5 @@
 <%- include('./partials/header.ejs')  %>
 
-
 <main class="basket_main">
   <h1 class="basket_title" data-translate="basket.title">Panier<i class="qnt many_article"><%= basketCount %> articles</i></h1>
 
@@ -48,11 +47,10 @@
           <th class="total_ttc total" data-translate="basket.vat">Total TTC</th>
           <td class="total_ttc price ttc_price">€ <%= totalWithTax.toFixed(2) %></td>
         </tr>
-
       </tbody>
     </table>
 
-    <button class="next" data-translate="basket.next">Poursuivre<i class='bx bxs-arrow-from-left' style='color:white'></i></button>
+    <button class="next" onclick="window.location.href='/commander'" data-translate="basket.next">Poursuivre<i class='bx bxs-arrow-from-left' style='color:white'></i></button>
   </section>
 
 </main>

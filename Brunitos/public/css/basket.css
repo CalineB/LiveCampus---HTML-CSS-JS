@@ -129,7 +129,10 @@ i.qnt.many_article  {
 }
 
 .sum_details th, .sum_details td {
-  vertical-align: middle; 
+  vertical-align: middle;
+  display: table-cell;
+  padding: 8px 15px;
+  white-space: nowrap;
 }
 
 .sum_details tbody {
@@ -150,10 +153,6 @@ i.qnt.many_article  {
   
     .basket_articles {
       padding: 1.5rem;
-    }
-  
-    .art_name {
-      font-size: 1.2rem;
     }
   
     .price {
@@ -185,7 +184,6 @@ i.qnt.many_article  {
     }
 
     .sum {
-      margin-left: 1.5rem;
       padding: 1.5rem;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -218,9 +216,20 @@ i.qnt.many_article  {
     }
 
 
-  .sum_details {
-    border-collapse: collapse;
-  }
+    .sum_details {
+      width: 50%;
+      max-width: 600px;
+    }
+  
+    .sum_details th {
+      width: 70%;
+      text-align: left;
+    }
+  
+    .sum_details td {
+      width: 30%;
+      text-align: right;
+    }
 }
   
 
