@@ -19,6 +19,30 @@
         <label>
             <input type="radio" name="delivery_method" value="a_emporter"> À emporter
         </label>
+
+        <div id="delivery_address">
+            <h2>Indiquez l'addresse de livraison</h2>
+            <label>
+                <input type="radio" name="delivery_address" value="saved"> Utiliser une adresse enregistrée
+            </label>
+            
+            <label>
+                <input type="radio" name="delivery_address" value="temp"> Entrer une nouvelle adresse
+            </label>
+            
+            <div id="temp-address-fields" style="display: none;">
+                <input type="text" name="street" placeholder="Rue" required>
+                <input type="text" name="street_number" placeholder="Numéro">
+                <input type="text" name="additional_line" placeholder="Complément d'adresse">
+                <input type="text" name="postal_code" placeholder="Code postal" required>
+                <input type="text" name="city" placeholder="Ville" required>
+            
+                <label>
+                    <input type="checkbox" name="save_address"> Enregistrer cette adresse pour plus tard
+                </label>
+            </div>
+        </div>
+       
     
         <h2>Choisissez votre moyen de paiement</h2>
         <label>
