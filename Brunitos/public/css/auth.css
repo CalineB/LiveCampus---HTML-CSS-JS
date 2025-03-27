@@ -11,7 +11,7 @@ body {
 }
 
 
-form {
+.auth_form {
     position: relative;
     width: 300px;
     max-width: 400px;
@@ -27,7 +27,7 @@ form {
 }
 
 
-form input {
+.auth_form input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -38,12 +38,12 @@ form input {
     box-sizing: border-box;
 }
 
-form input:focus {
+.auth_form input:focus {
     border-color: goldenrod;
 }
 
 
-form .label {
+.auth_form .label {
     position: relative;
     top: -10px;
     left: 50px;
@@ -56,7 +56,7 @@ form .label {
 
 }
 
-form input:focus + label {
+.auth_form input:focus + label {
     color: var(--gold-color);
     transform: translateY(-10px);
     background-color: white;
@@ -64,7 +64,7 @@ form input:focus + label {
 }
 
 
-form .btn {
+.auth_form .btn {
     background-color: var(--gold-color);
     color: rgb(75, 68, 68);
     border: none;
@@ -75,7 +75,7 @@ form .btn {
     font-size: 16px;
 }
 
-form .btn:hover {
+.auth_form .btn:hover {
     background-color: var(--green-color);
     color: whitesmoke;
 }
@@ -87,13 +87,13 @@ form .btn:hover {
     margin-top: 1.5rem;
 }
 
-form .register {
+.auth_form .register {
     background-color: rgb(5, 5, 87);
     color: whitesmoke;
     width: 70%;
 }
 
-form .register:hover {
+.auth_form .register:hover {
     background-color: var(--gold-color);
     color: rgb(23, 11, 11);
 }
@@ -104,7 +104,7 @@ form .register:hover {
 
 /* Desktop styling */
 @media (min-width: 1024px) {
-    form {
+    .auth_form {
         width: 350px;
     }
 }
@@ -114,51 +114,51 @@ form .register:hover {
 /* --- Mode Nuit --- */
 body.dark-mode .auth_title {
     background-color: rgb(33, 33, 33); /* Darkmode background */
-    color: rgb(153, 121, 24); /* Texte */
+    color: rgb(153, 121, 24);
   }
   
-  body.dark-mode form {
+  body.dark-mode .auth_form {
     background-color: rgb(33, 33, 33); /* Darkmode background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7); /* Ombres */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
   }
   
-  body.dark-mode form input {
-    border: 1px solid rgb(103, 158, 60); /* Bordure */
-    background-color: rgb(33, 33, 33); /* Darkmode background */
-    color: rgb(220, 220, 220); /* Texte */
+  body.dark-mode .auth_form input {
+    border: 1px solid rgb(103, 158, 60);
+    background-color: rgb(33, 33, 33);
+    color: rgb(220, 220, 220);
   }
   
-  body.dark-mode form input:focus {
-    border-color: rgb(153, 121, 24); /* Bordure */
+  body.dark-mode .auth_form input:focus {
+    border-color: rgb(153, 121, 24);
   }
   
-  body.dark-mode form label {
-    color: rgb(153, 121, 24); /* Couleur label */
-    background-color: rgb(33, 33, 33); /* Darkmode background */
+  body.dark-mode .auth_form label {
+    color: rgb(153, 121, 24);
+    background-color: rgb(33, 33, 33);
   }
   
-  body.dark-mode form .btn {
+  body.dark-mode .auth_form .btn {
     background-color: rgb(103, 158, 60); /* Darkmode background */
     color: rgb(220, 220, 220); /* Texte */
   }
   
-  body.dark-mode form .btn:hover {
+  body.dark-mode .auth_form .btn:hover {
     background-color: rgb(153, 121, 24); /* background survol */
-    color: black; /* Couleur du text */
+    color: black;
   }
   
-  body.dark-mode form .register {
-    background-color:var(--dark-red-color); /* Darkmode */
-    color: rgb(220, 220, 220); /* Texte */
+  body.dark-mode .auth_form .register {
+    background-color:var(--dark-red-color);
+    color: rgb(220, 220, 220);
   }
   
-  body.dark-mode form .register:hover {
-    background-color: rgb(3, 3, 69); /* Couleur de fond */
-    color: var(--gold-color); /* Texte darkmode */
+  body.dark-mode .auth_form .register:hover {
+    background-color: rgb(3, 3, 69);
+    color: var(--gold-color);
   }
   
 
-  body.dark-mode form .forget_psw {
+  body.dark-mode .auth_form .forget_psw {
     color: whitesmoke;
     text-decoration: underline var(--green-color);
   }

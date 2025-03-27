@@ -21,7 +21,7 @@ const renderBasket = (req, res) => {
 };
 
 const renderOrder = (req, res) => {
-  res.render('order_page')
+  res.render('delivery_payment_choice')
 }
 
   module.exports = { renderBasket, renderOrder };

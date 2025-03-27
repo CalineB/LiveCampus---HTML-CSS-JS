@@ -33,13 +33,12 @@
                 </div>
               <% } %>
               <img src="<%= product.image %>" alt="<%= product.name %>" />
-              <p class="art_name">
-                <%= product.name %><span>€ <%= parseFloat(product.price).toFixed(2) %></span>
-              </p>
-              <details class="details">
-                <summary>Description</summary>
-                <p><%= product.description %></p>
-              </details>
+              <p class="art_name"><%= product.name %></p>
+              
+              <p class="description"><%= product.description %></p>
+
+              <span>€ <%= parseFloat(product.price).toFixed(2) %></span>
+
               <button class="add-to-cart" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>">
                 Ajouter au panier
               </button>

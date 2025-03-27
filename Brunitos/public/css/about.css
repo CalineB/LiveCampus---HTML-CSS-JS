@@ -1,6 +1,6 @@
 /* Mise en page mobile-first*/
 
-.legal_info , .law.info, .second_title, .business_ID, p {
+.legal_info, .second_title, .business_ID, .info {
     margin: 0 2rem;
 }
 
@@ -89,7 +89,7 @@ body.dark-mode table.business_ID tr:nth-child(even) {
     background-color: rgba(70, 70, 70, 0.8);
 }
 
-body.dark-mode p {
+body.dark-mode .info {
     color: var(--dark-text-color);
 }
 
