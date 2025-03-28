@@ -41,7 +41,19 @@ label {
     display: block;
     margin: 10px 0;
     font-size: 1em;
+    cursor: pointer;
 }
+
+
+/* Appliquer une couleur au texte seulement pour le radio sélectionné */
+input[type="radio"]:checked + span {
+    color: var(--gold-color);
+}
+
+input[type="radio"]:not(:checked) + span {
+    color: initial; 
+}
+
 
 /* Input styles */
 input[type="radio"] {
@@ -95,6 +107,14 @@ select {
 
 select:hover {
     border: 2px solid  rgb(72, 101, 27);
+}
+
+.payment_address, span {
+    text-align: center;
+}
+
+span {
+    display: inline;
 }
 
 /* Désactivation des éléments */
@@ -193,4 +213,8 @@ input[disabled] {
 
 .dark-mode .cancel:hover {
     background-color: #820505c6;
+}
+
+.dark-mode input[type="radio"]:not(:checked) + span {
+    color: white; 
 }

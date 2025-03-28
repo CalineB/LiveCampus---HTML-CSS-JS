@@ -23,13 +23,30 @@ document.addEventListener("DOMContentLoaded", function () {
             radio.addEventListener("change", updateDeliveryAddressVisibility);
         });
 
+        // Sélectionner le premier input par défaut si aucun n'est coché
         if (!document.querySelector('input[name="delivery_method"]:checked')) {
             deliveryMethods[0].checked = true;
         }
 
-        updateDeliveryAddressVisibility(); // Appel initial
+        // Utiliser un setTimeout pour s'assurer que la mise à jour se fait après le rendu initial
+        setTimeout(updateDeliveryAddressVisibility, 0);
     } else {
         console.error("Aucun bouton radio pour le mode de récupération !");
+    }
+
+    function updatePaymentAddressVisibility() {
+        let selectedPayment = document.querySelector('input[name="payment_method"]:checked');
+
+        document.querySelectorAll(".payment_address").forEach(p => {
+            p.style.display = "none";
+        });
+
+        if (selectedPayment) {
+            let selectedPaymentAddress = selectedPayment.closest("label").querySelector(".payment_address");
+            if (selectedPaymentAddress) {
+                selectedPaymentAddress.style.display = "block";
+            }
+        }
     }
 
     if (paymentMethods.length > 0) {
@@ -37,28 +54,25 @@ document.addEventListener("DOMContentLoaded", function () {
             radio.disabled = false;
             radio.addEventListener("change", function () {
                 console.log("Moyen de paiement sélectionné :", this.value);
+                updatePaymentAddressVisibility();
             });
         });
 
         if (!document.querySelector('input[name="payment_method"]:checked')) {
             paymentMethods[0].checked = true;
         }
+
+        updatePaymentAddressVisibility();
     } else {
         console.error("Aucun bouton radio pour le mode de paiement !");
     }
 
-    // Affichage des champs de l'adresse temporaire si "temp" est sélectionné
     addressOptions.forEach(input => {
         input.addEventListener('change', function () {
             tempAddressFields.style.display = (this.value === 'temp') ? 'block' : 'none';
         });
     });
 
-    // Vérifier l'état initial
     let selectedAddressOption = document.querySelector('input[name="delivery_address"]:checked');
-    if (selectedAddressOption && selectedAddressOption.value === "temp") {
-        tempAddressFields.style.display = 'block';
-    } else {
-        tempAddressFields.style.display = 'none';
-    }
+    tempAddressFields.style.display = selectedAddressOption && selectedAddressOption.value === "temp" ? 'block' : 'none';
 });

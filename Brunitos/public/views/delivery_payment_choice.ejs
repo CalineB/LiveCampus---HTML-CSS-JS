@@ -46,19 +46,27 @@
     
         <h2>Choisissez votre moyen de paiement</h2>
         <label>
-            <input type="radio" name="payment_method" value="carte_bancaire" required checked> Carte Bancaire
+            <input type="radio" name="payment_method" value="carte_bancaire" required checked>
+            <span>Carte Bancaire</span>
         </label>
         <label>
-            <input type="radio" name="payment_method" value="crypto"> Crypto
+            <input type="radio" name="payment_method" value="crypto">
+            <span> Crypto</span>
+            <p class="payment_address">0x0000000000000000</p>
         </label>
         <label>
-            <input type="radio" name="payment_method" value="virement"> Virement immédiat
+            <input type="radio" name="payment_method" value="virement">
+            <span>Virement immédiat</span>
+            <p class="payment_address">IBAN Number</p>
         </label>
         <label>
-            <input type="radio" name="payment_method" value="paylib"> Paylib
+            <input type="radio" name="payment_method" value="paylib">
+            <span>Paylib</span>
+            <p class="payment_address">00 00 00 00 00</p>
         </label>
         <label>
-            <input type="radio" name="payment_method" value="especes" id="cashPayment" disabled> Espèces (hors livraison)
+            <input type="radio" name="payment_method" value="especes" id="cashPayment" disabled>
+            <span>Espèces (hors livraison)</span>
         </label>
     
         <button class="confirm" type="submit">Valider ma commande</button>

@@ -1,4 +1,4 @@
-const pool = require('../../../database/users.sql');
+// const pool = require('../../../database/users.sql');
 
 const renderBasket = (req, res) => {
   try {
