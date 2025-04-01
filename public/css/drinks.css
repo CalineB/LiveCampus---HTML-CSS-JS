@@ -17,6 +17,7 @@ body {
     margin: 0;
     padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -28,6 +29,7 @@ body {
     max-width: 450px;
     width: 100%;
     border: 1px solid var(--border-color);
+    margin: 0 auto;
 }
 
 h2 {
@@ -91,4 +93,13 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+ul.navLinks li {
+    background: #1e1e1e;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    list-style: none;
 }

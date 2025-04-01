@@ -54,6 +54,14 @@ header {
     transform: scale(1.05);
 }
 
+ul.navLinks li {
+    background: #1e1e1e;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    list-style: none;
+}
+
 /* Dark Mode pour les cartes */
 @media (prefers-color-scheme: dark) {
     .business {
