@@ -1,8 +1,9 @@
 /* Mise en page mobile-first*/
 
-.legal_info, .second_title, .business_ID, .info {
+p.paiement.info, .legal_info, .second_title, .business_ID, .info {
     margin: 0 2rem;
 }
+
 
 .legal_info {
     margin: 2rem;

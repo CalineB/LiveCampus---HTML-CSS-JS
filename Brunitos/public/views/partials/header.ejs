@@ -8,24 +8,28 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/reset.css"/> <!--Mise en page commune à toutes les pages-->
-    <link rel="stylesheet" href="/css/navbar.css"/> <!--Mise en page commune à toutes les pages-->
-    <link rel="stylesheet" href="/css/products.css"/> <!--Mise en page spécifique à la page-->
-    <link rel="stylesheet" href="/css/footer.css"/> <!--Mise en page générale à toutes les pages-->
-    <link rel="stylesheet" href="/css/about.css">
-    <link rel="stylesheet" href="/css/admin.css">
-    <link rel="stylesheet" href="/css/auth.css">
-    <link rel="stylesheet" href="/css/basket.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/order.css">
-    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/brunitos/css/reset.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/brunitos/css/navbar.css"/> <!--Mise en page commune à toutes les pages-->
+    <link rel="stylesheet" href="/brunitos/css/products.css"/> <!--Mise en page spécifique à la page-->
+    <link rel="stylesheet" href="/brunitos/css/footer.css"/> <!--Mise en page générale à toutes les pages-->
+    <link rel="stylesheet" href="/brunitos/css/about.css">
+    <link rel="stylesheet" href="/brunitos/css/admin.css">
+    <link rel="stylesheet" href="/brunitos/css/auth.css">
+    <link rel="stylesheet" href="/brunitos/css/basket.css">
+    <link rel="stylesheet" href="/brunitos/css/index.css">
+    <link rel="stylesheet" href="/brunitos/css/order.css">
+    <link rel="stylesheet" href="/brunitos/css/profile.css">
+    <link rel="stylesheet" href="/brunitos/css/uxui_home.css">
   </head>
 
   <body>
+    <div class="uxui_nav">
+      <a href="/uxui" class="uxui_home">Retour à UXUI</a>
+    </div>
 
     <nav class="navbar">
       <h2 class="rest_name">
-        <a href="/">Brun'Itos</a>
+        <a href="/brunitos">Brun'Itos</a>
         <a href="panier">
           <i class="bx bxs-basket bx-tada"
             style="color: rgba(40, 93, 16, 0.48)">
@@ -43,20 +47,20 @@
 
       <ul class="navLinks">
         <li class="navLink" data-translate="nav.home">
-          <a href="/">Accueil</a>
+          <a href="/brunitos">Accueil</a>
         </li>
         <li class="navLink" data-translate="nav.card">
-          <a href="http://localhost:3000/produits">Carte</a>
+          <a href="/brunitos/produits">Carte</a>
         </li>
         <li class="navLink" data-translate="nav.about">
-          <a href="http://localhost:3000/informations">À propos</a>
+          <a href="/brunitos/informations">À propos</a>
         </li>
         <li class="navIcons">
-          <a href="/profil">
+          <a href="/brunitos/profil">
             <i class="bx bxs-user" style="color: rgba(183, 148, 10, 0.71)"></i>
           </a>
           <button class="green greenBtn" data-translate="nav.connect">
-            <a href="/connexion">Se connecter</a>
+            <a href="/brunitos/connexion" class="connect">Se connecter</a>
           </button>
 
           <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>

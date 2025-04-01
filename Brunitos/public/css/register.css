@@ -1,0 +1,38 @@
+:root {
+    --green-color: rgb(72, 101, 27);
+    --red-color: rgb(131, 33, 33);
+    --gold-color:  rgb(180, 147, 37);
+}
+
+.auth_title {
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+#submit-button.btn {
+    background-color: var(--gold-color);
+    color: white;
+    border-radius: 20px;
+    width: 40%;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+#submit-button.btn:hover {
+    background-color: var(--green-color);
+    border: 2px solid var(--gold-color);
+    font-weight: bold;
+    padding: 0.7;
+}
+

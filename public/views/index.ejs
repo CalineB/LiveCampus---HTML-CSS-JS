@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UX-IX Restaurants</title>
-    <link rel="stylesheet" href="uxui.css">
-</head>
-<body>
-    <header>
-        <h1>UX-IX Restaurants</h1>
+<%- include('./partials/header.ejs')  %>
+
+    <link rel="stylesheet" href="../css/uiux.css">
+
         <p>Un concept unique : un immeuble, 8 expériences culinaires.</p>
     </header>
     <section class="concept">
@@ -27,22 +20,23 @@
             <li>Une salle de restaurant commune à nos dark kitchens</li>
             <li>Programme de fidélité et avantages exclusifs</li>
             <li>Espace chargements téléphone mobiles et chill</li>
-            <li>Golf</li>
-            <li>Boutique souvenirs</li>
         </ul>
     </section>
-    <section class="restaurants">
-        <h2>Nos Restaurants</h2>
+    <section class="restaurants" id="restaurants">
+        <h2>Nos Espaces</h2>
         <div class="grid">
             <a href="#" class="resto">Notre restaurant gastronomique</a>
-            <a href="http://localhost:3000/" target="_blank" class="resto">Brun'itos</a>
+            <a href="brunitos"target="_blank" class="resto">Brun'itos</a>
             <a href="#" class="resto">Restaurant Plateaux découverte fruits et plats locaux</a>
             <a href="#" class="resto">Restaurant 4</a>
             <a href="#" class="resto">Restaurant 5</a>
             <a href="#" class="resto">Restaurant 6</a>
             <a href="#" class="resto">Restaurant 7</a>
-            <a href="boissons" target="_blank">Boissons</a>
+            <a href="#" class="resto">Espace chill</a>
         </div>
     </section>
+
+    <footer>
+    </footer>
 </body>
 </html>

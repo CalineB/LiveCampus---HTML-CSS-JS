@@ -2,10 +2,10 @@
 BEGIN;
 
 INSERT INTO products (recipe_id, name, category_id, price, image, description, "isGrayedOut") VALUES
-(10, 'Végé''tos', 1, 9.00, '/images/burrito1.jpg', 'Un burrito végétarien garni de tofu épicé, de haricots rouges, de tater tots croustillants et d’une sauce maison savoureuse.', FALSE),
-(11, 'Poul''itos', 1, 8.00, '/images/burrito2.jpeg', 'Un burrito généreux avec du poulet mariné, des tater tots croustillants, du cheddar fondant et une touche de sauce maison.', FALSE),
-(12, 'Beef''itos', 1, 10.00, '/images/burrito3.jpeg', 'Un burrito gourmand à base de bœuf mariné, poivrons sautés, oignons caramélisés, béchamel au gruyère et œufs.', FALSE),
-(13, 'Sauss''itos', 1, 7.00, '/images/burrito4.jpg', 'Un burrito généreux avec des saucisses de poulet, du fromage emmental fondant et des œufs moelleux.', FALSE),
+(10, 'Végé''tos', 1, 9.00, 'images/burrito1.jpg', 'Un burrito végétarien garni de tofu épicé, de haricots rouges, de tater tots croustillants et d’une sauce maison savoureuse.', FALSE),
+(11, 'Poul''itos', 1, 8.00, 'images/burrito2.jpeg', 'Un burrito généreux avec du poulet mariné, des tater tots croustillants, du cheddar fondant et une touche de sauce maison.', FALSE),
+(12, 'Beef''itos', 1, 10.00, 'images/burrito3.jpeg', 'Un burrito gourmand à base de bœuf mariné, poivrons sautés, oignons caramélisés, béchamel au gruyère et œufs.', FALSE),
+(13, 'Sauss''itos', 1, 7.00, 'images/burrito4.jpg', 'Un burrito généreux avec des saucisses de poulet, du fromage emmental fondant et des œufs moelleux.', FALSE),
 
 (4, 'Mix', 2, 18.00, NULL, 'Poulet frit sans œuf : 4 tenders, 4 ailes, 2 hauts de cuisses, 2 pilons (12 pièces).', FALSE),
 (4, 'Ailes', 2, 9.00, NULL, 'Poulet frit sans œuf - 10 pièces.', FALSE),

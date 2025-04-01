@@ -1,5 +1,4 @@
-const sequelize = require('../../sequelize-client');
-
+const sequelize = require('../../sequelize_brunitos');
 
 const Role = require('./Roles')(sequelize);
 const User = require('./User')(sequelize);
@@ -66,10 +65,14 @@ RecipeIngredient.belongsTo(Ingredient, { foreignKey: 'ingredient_id' });
 Recipe.hasOne(Product, { foreignKey: 'recipe_id' });
 Product.belongsTo(Recipe, { foreignKey: 'recipe_id' });
 
+console.log(`Tentative de connexion à la base de données : ${process.env.BRUNITOS_DATABASE}`);
+console.log(`Utilisateur : ${process.env.BRUNITOS_USER}`);
+console.log(`Hôte : ${process.env.BRUNITOS_HOST}`);
+
 // Synchronisation avec la base de données
 sequelize.sync()
   .then(() => {
-    console.log('Base de données synchronisée');
+    console.log(`Base de données synchronisée : ${sequelize.config.database}`);
   })
   .catch((err) => {
     console.error('Erreur de synchronisation:', err);

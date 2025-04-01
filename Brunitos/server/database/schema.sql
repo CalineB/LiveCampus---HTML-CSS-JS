@@ -16,7 +16,7 @@ ingredients,
 supplier_ingredients,
 recipes,
 recipe_ingredients
- CASCADE;
+CASCADE;
 
 DROP TYPE order_status CASCADE;
 DROP TYPE payment_method CASCADE;

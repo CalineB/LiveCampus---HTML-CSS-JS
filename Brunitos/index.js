@@ -1,4 +1,4 @@
-require('dotenv').config();
+/*require('dotenv').config();
 const debug = require('debug')('app:server');
 const cors = require('cors');
 
@@ -9,17 +9,20 @@ const app = express();
 
 app.use(cors({ origin: '*' }));
 
-/* app runs on .env variable or default PORT */
-const port = process.env.PORT || 4000;
+// app runs on .env variable or default PORT
+const port = process.env.PORT || 'http://localhost:3000'; 
 
 
-/* require router file */
+// require router file
 const router = require('./server/routes');
 
 app.use(cors({ origin: '*' }));
 
-/* send bodies in json format */
+// send bodies in json format
 app.use(express.json());
+
+// Vues autres serveurs 
+app.set('views', path.join(__dirname, 'views'));
 
 // Configure EJS as the view engine
 app.set('view engine', 'ejs');
@@ -42,5 +45,6 @@ app.use(session({
 }));
 
 app.listen(port, () => {
-  console.log(`Server ready: http://localhost:${port}`);
+  console.log(`Server ready: http://localhost:${port}/brunitos`);
 });
+*/

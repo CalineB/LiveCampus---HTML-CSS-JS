@@ -165,8 +165,21 @@ p.user_profile.name {
 }
 
 .pagination {
-  margin-top: 2rem;
-  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator {
+  margin: 0 5px;
+  margin-top: .5rem;
+  color: black;
+}
+
+.current-page {
+  color: black;
 }
 
 /* --- Mise en Page Responsive --- */
@@ -174,13 +187,13 @@ p.user_profile.name {
   .profile_main {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: 2fr 1fr; /* 2/3 pour infos, 1/3 pour commandes */
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
     padding: 20px;
   }
 
   h1 {
-    grid-column: span 2; /* Le titre s'étale sur toute la largeur */
+    grid-column: span 2;
   }
 
   section.profile.info {

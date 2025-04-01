@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  const Product = sequelize.define('Product', {
+  return sequelize.define('Product', {
     product_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -30,29 +30,14 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'products_categories',
+        model: 'Category',
         key: 'category_id',
       },
     },
   }, {
+    sequelize,
+    modelName: 'Product',
     tableName: 'products',
     timestamps: false,
   });
-
-  // ✅ Définition des associations
-  Product.associate = (models) => {
-    // Association avec ProductAvailability (relation 1:N)
-    Product.hasMany(models.ProductAvailability, { 
-      foreignKey: 'product_id',
-      as: 'product_availabilities' 
-    });
-
-    // Association avec products_categories (relation N:1)
-    Product.belongsTo(models.products_categories, { 
-      foreignKey: 'category_id', 
-      as: 'category' 
-    });
-  };
-
-  return Product;
 };

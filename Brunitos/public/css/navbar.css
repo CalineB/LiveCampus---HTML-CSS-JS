@@ -63,6 +63,17 @@
     font-weight: bold;
 }
 
+
+.navLinks a:hover {
+    color: var(--gold-color);
+}
+
+
+.bxs-user:hover {
+    color: var(--green-color) !important;
+    font-size: 1.3rem;
+}
+
 .menu-toggle {
     display: none;
 }
@@ -236,6 +247,40 @@ body.dark-mode .greenBtn {
     background-color: var(--dark-green-color);
 }
 
+body.dark-mode .greenBtn:hover {
+    background-color: whitesmoke;
+}
+
 body.dark-mode .bxs-basket, .bxs-user {
     color: whitesmoke !important;
+}
+
+
+
+body.dark-mode .navLinks a:hover {
+    color: whitesmoke;
+}
+
+
+body.dark-mode .bxs-user:hover {
+    color: var(--gold-color) !important;
+    font-size: 1.3rem;
+}
+
+body.dark-mode .navLinks a {
+    color: var(--gold-color);
+}
+
+
+body.dark-mode .bxs-user {
+    color: var(--green-color) !important;
+    font-size: 1.3rem;
+}
+
+body.dark-mode a.connect {
+    color: whitesmoke;
+}
+
+body.dark-mode a.connect:hover {
+    color: var(--gold-color);
 }

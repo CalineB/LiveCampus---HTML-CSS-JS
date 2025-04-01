@@ -1,7 +1,7 @@
 const db = require("../models");
 
 const renderHome = (req, res) => {
-    res.render('index');   
+    res.render('brunitos_index');   
 };
 
 const renderAbout = (req, res) => {

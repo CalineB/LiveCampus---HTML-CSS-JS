@@ -39,6 +39,10 @@ i {
     margin: 0 auto 2rem; /* Centre le paragraphe et ajoute un espace en bas */
 }
 
+.bxs-user {
+    color: var(--gold-color) !important;
+}
+
 /* Styles pour les écrans plus larges */
 @media (min-width: 768px) {
     q {

@@ -1,6 +1,5 @@
 <%- include('./partials/header.ejs')  %>
 
-
     <main class="profile_main">
 
       <h1 class="welcome" data-translate="profile.welcome">Bienvenue user.name||Aka</h1>
@@ -8,7 +7,7 @@
       <section class="profile info">
 
         <div class="user_img">
-          <img src="/images/profile.png" alt="profil_picture">
+          <img src="images/profile.png" alt="profil_picture">
           <div class="img_settings">
             <label id="change_pic" for="file_input">Changer de photo</label>
             <input type="file" id="file_input" accept="image/*">
@@ -61,11 +60,13 @@
 
         <div class="pagination">
           <span class="current-page" data-translate="pagination.current">Page 1</span>
-          /
+          <span class="separator"> | </span>
           <span class="total-pages" data-translate="pagination.total">1</span>
         </div>
       </section>
 
     </main>
+
+    <script src="/brunitos/script/profile.js"></script>
 
     <%- include('./partials/footer.ejs')  %>

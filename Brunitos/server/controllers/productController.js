@@ -69,6 +69,8 @@ const renderProducts = async (_, res) => {
         console.log("Produits après mise à jour :", products);
 
         res.render('products', { products });
+        console.log("Produits envoyés à la vue :", JSON.stringify(products, null, 2));
+
 
     } catch (error) {
         console.error('Erreur lors de la récupération des produits:', error);

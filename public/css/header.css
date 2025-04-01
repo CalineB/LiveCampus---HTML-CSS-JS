@@ -1,0 +1,16 @@
+ul.navLinks {
+    display: flex;
+    justify-content: center;
+}
+
+ul.navLinks a {
+    color: whitesmoke;
+}
+
+ul.navLinks a:visited {
+    color: whitesmoke;
+}
+
+ul.navLinks a:hover {
+    color: #42a5f5;
+}
